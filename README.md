@@ -1,6 +1,6 @@
 # 🌟 FocusSpace 没有记录 就没有发生
 ---
-
+![](https://github.com/starryKey/FocusSpace/blob/master/images/Starry.jpg)
 仰望星空  
 我仰望星空，  
 它是那样辽阔而深邃；  

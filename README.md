@@ -1,4 +1,6 @@
-* FocusSpace
+# FocusSpace 没有记录 就没有发生
+
+***
 
 仰望星空
 我仰望星空

@@ -27,9 +27,16 @@
 ---
 # 📱iOS
 
-Core Skills  | Describe | Articles | References
+Subject  | Version | Articles | References
 ---|---|---|---
-语言基础 | Objective-C  Swift | 测试文章 | 测试引用
+Swift | 3.x | [学习笔记](https://github.com/starryKey/LearnSwift) | [官方网站](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
+
+
+# 😂Python
+Subject  | Version | Articles | References
+---|---|---|--- 
+Python学习笔记 | 3.7 | [学习笔记](https://github.com/starryKey/LearnPython) | [官方网站](https://docs.python.org)
+
 
 
 

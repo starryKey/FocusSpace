@@ -37,10 +37,10 @@ Subject  | Version | Articles | References
 ---|---|---|--- 
 Python学习笔记 | 3.7 | [学习笔记](https://github.com/starryKey/LearnPython) | [官方网站](https://docs.python.org)
 
-# 📹音视频
+#📹音视频
 Subject  | Version | Articles | References
 ---|---|---|--- 
-音视频 | 1.0 | Todo | Todo
+音视频 | 1.0 | Todo | Todo
 
 
 

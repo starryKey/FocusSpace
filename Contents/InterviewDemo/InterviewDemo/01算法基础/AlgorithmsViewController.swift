@@ -14,6 +14,14 @@ class AlgorithmsViewController: UIViewController {
         super.viewDidLoad()
 
         // 一、基础的数据结构
+        // 01 数组
+        // --**实现方式**--
+        var arr = ContiguousArray<Int>()
+        
+        arr.append(0)
+        arr.append(1)
+        print(arr)
+        
     }
     
 

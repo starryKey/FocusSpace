@@ -82,8 +82,32 @@ class AlgorithmsViewController: UIViewController {
         // ["b": 4, "a": 3]
         print(lastValues)
         
+        // 创建一个空字典
+//        let emptyDic1 = Dictionary<String, Any>()
+//        let emptyDic2:[String:String] = [:]
+//        let emptyDic3 = [String:String]()
+//        let emptyDic4:Dictionary<String, String> = [:]
+    
+        var dict = ["0":"hello", "1":"world", "2":"!"]
+        // 有则更新，无则新增
+        dic["3"] = "Coding"
+        // 有则更新，并返回旧值，无则新增
+        if let oldValue = dict.updateValue("🍎", forKey: "3"){
+            print("The old value of \(oldValue) was replaced with a new one.")
+        } else {
+            print("No value was found in the dictionary for that key.")
+        }
+        print(dict)
+        // Prints "No value was found in the dictionary for that key."
         
-        
+        // 有则删除，无则相当于无操作
+        dict.removeValue(forKey: "0")
+        // 删除指定key:value
+        if let index = dict.index(forKey: "1") {
+            dict.remove(at: index)
+        }
+        // 删除全部
+        dict.removeAll()
     }
     
     //打印内存地址
@@ -91,16 +115,54 @@ class AlgorithmsViewController: UIViewController {
         let addr = Int(bitPattern: object)
         return String(format: "%p", addr)
     }
+
+}
+
+
+protocol Stack {
+    // 持有的元素类型
+    associatedtype Element
+    // 是否为空
+    var isEmpty: Bool{ get }
+    // 栈顶元素
+    var peek: Element? { get }
     
+    // 进栈
+    mutating func push(_ newElement: Element)
+    // 出栈
+    mutating func pop() -> Element?
+}
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
+
+
+// 使用数组实现栈
+//class Stack {
+//    var stack:[AnyObject]
+//    var isEmpty: Bool {
+//        return stack.isEmpty
+//    }
+//    var peek: AnyObject? {
+//        return stack.last
+//    }
+//    init() {
+//        stack = [AnyObject]()
+//    }
+//
+//    func push(object: AnyObject) {
+//        stack.append(object)
+//    }
+//    func pop() -> AnyObject? {
+//        if isEmpty {
+//            return nil
+//        } else {
+//            return stack.removeLast()
+//        }
+//    }
+//}
+
+//使用数组实现队列
+class Queue {
+    
 }

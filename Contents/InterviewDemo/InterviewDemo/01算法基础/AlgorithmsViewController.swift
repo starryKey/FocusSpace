@@ -61,6 +61,7 @@ class AlgorithmsViewController: UIViewController {
         arrSlice[0] = 0
         print(arrSlice)
         */
+        // 字典
         
         var dic = ["a": "1", "b": nil, "c": "3", "d": ""]
         if let bValue = dic["b"] {

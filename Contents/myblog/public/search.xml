@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>时间复杂度</title>
+      <link href="/2020/08/23/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
+      <url>/2020/08/23/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</url>
+      
+        <content type="html"><![CDATA[<h3 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h3><p>算法的时间复杂度，用来度量算法的运行时间，以算法中频度最大的语句来度量，记作: T(n) = O(f(n))，它表示随着输入大小n的增大，算法执行需要的时间的增长速度可以用 f(n) 来描述。</p><p><strong>时间复杂度的计算</strong><br>如果一个算法的执行次数是 T(n)，那么只保留最高次项，同时忽略最高项的系数后得到函数 f(n)，此时算法的时间复杂度就是 O(f(n))，通常称为大O推导法。时间复杂度计算的一般法则如下：</p><ul><li>一个顺序结构的代码，时间复杂度是O(1),对于一个for循环，假设循环次数为n, 循环体的时间复杂度为O(m),那么该循环的时间复杂度为O(n * m)。如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">func testFunc(_ n: Int) &#123;</span><br><span class="line">    for i in 0..&lt;n &#123;                // 循环次数：n</span><br><span class="line">        print(&quot;index = \(i)&quot;)       // 循环体时间复杂度O(1)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><pre><code>上述时间时间复杂度为O(n * 1)，即O(n).</code></pre><ul><li>嵌套循环时，假设循环体的时间复杂度为O(n),各个循环的循环次数为a、b、c…，那么该循环侧时间复杂度为O(n <em> a </em> b <em> c </em> …)，分析时可由内向外分析：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">func testFunc(_ n: Int) &#123;</span><br><span class="line">    for i in 0..&lt;n &#123;                        // 循环次数 n</span><br><span class="line">        for j in 0..&lt;n&#123;                     // 循环次数 n</span><br><span class="line">            print(&quot;i = \(i) --&gt;j = \(j)&quot;)   // 循环体时间复杂度O(1)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><p>此时时间复杂度为O(n * n x 1),即O(n^2)。</p><ul><li>对于顺序执行的语句或算法，总的时间复杂度为其中最大的时间复杂度。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">func testFunc(_ n: Int) &#123;</span><br><span class="line">    // 第一部分时间复杂度为O(n^2)</span><br><span class="line">    for i in 0..&lt;n &#123;                        // 循环次数 n</span><br><span class="line">        for j in 0..&lt;n&#123;                     // 循环次数 n</span><br><span class="line">            print(&quot;i = \(i) --&gt;j = \(j)&quot;)   // 循环体时间复杂度O(1)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    // 第二部分时间复杂度为O(n)</span><br><span class="line">    for i in 0..&lt;n &#123;                        // 循环次数：n</span><br><span class="line">        print(&quot;index = \(i)&quot;)               // 循环体时间复杂度O(1)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><p>此时时间复杂度为max(O(n^2),O(n))，即O(n^2).</p><ul><li>对于条件判断语句，总的时间复杂度等于其中<strong>时间复杂度最大的路径</strong>的时间复杂度。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">func testFunc(_ n: Int) &#123;</span><br><span class="line">    if (n &gt; 3) &#123;</span><br><span class="line">        // 第一条路径复杂度为O(n^2)</span><br><span class="line">        for i in 0..&lt;n &#123;                        // 循环次数 n</span><br><span class="line">            for j in 0..&lt;n&#123;                     // 循环次数 n</span><br><span class="line">                print(&quot;i = \(i) --&gt;j = \(j)&quot;)   // 循环体时间复杂度O(1)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        // 第二条路径时间复杂度为O(n)</span><br><span class="line">        for i in 0..&lt;n &#123;                        // 循环次数：n</span><br><span class="line">            print(&quot;index = \(i)&quot;)               // 循环体时间复杂度O(1)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><p>此时时间复杂度为max(O(n^2),O(n))，即O(n^2)。</p><ul><li>二分查找的时间复杂度是O(logn)。</li></ul><h2 id="时间复杂度的增长率"><a href="#时间复杂度的增长率" class="headerlink" title="时间复杂度的增长率"></a>时间复杂度的增长率</h2><p><img src="./../images/timg.png" alt="timg"></p><h3 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h3><p>算法的空间复杂度是指在算法中所需要的辅助空间单元，而不包括问题的原始数据占用的空间。计算公式为：S(n)=O(f(n))，其中n为问题的规模，f(n)为语句关于n所占存储空间的函数。</p><h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ul><li><a href="https://www.jianshu.com/p/f4cca5ce055a" target="_blank" rel="noopener">十分钟搞定时间复杂度</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构与算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>focus</title>
+      <link href="/2019/05/09/focus/"/>
+      <url>/2019/05/09/focus/</url>
+      
+        <content type="html"><![CDATA[<h2 id="测试-哈哈哈哈😄"><a href="#测试-哈哈哈哈😄" class="headerlink" title="测试 哈哈哈哈😄"></a>测试 哈哈哈哈😄</h2>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>哈哈哈😂</title>
+      <link href="/2019/05/09/hello-world/"/>
+      <url>/2019/05/09/hello-world/</url>
+      
+        <content type="html"><![CDATA[<h2 id="这是个测试的文档"><a href="#这是个测试的文档" class="headerlink" title="这是个测试的文档"></a>这是个测试的文档</h2>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>

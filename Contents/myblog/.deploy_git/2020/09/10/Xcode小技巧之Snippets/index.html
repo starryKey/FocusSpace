@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.8.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","Pisces | Gemini":240,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Xcode中有许多小功能，可能经常被使用到，但是却没被发觉，如Xcode Snippets。 在敲代码时，经常会遇到刚敲几个字母就会有相应的提示，点击enter选中时，代码段立即显示出来，再根据对应的提示进行代码编写，极大地提升了代码的编程效率，如：  带有{}图标的均代表有该操作，只需输入几个单词就能完成如下代码的编写。 1234static dispatch_once_t onceToken;">
+<meta name="keywords" content="Xcode iOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Xcode小技巧之Snippets">
+<meta property="og:url" content="http://yoursite.com/2020/09/10/Xcode小技巧之Snippets/index.html">
+<meta property="og:site_name" content="Focus&#39;s blog">
+<meta property="og:description" content="Xcode中有许多小功能，可能经常被使用到，但是却没被发觉，如Xcode Snippets。 在敲代码时，经常会遇到刚敲几个字母就会有相应的提示，点击enter选中时，代码段立即显示出来，再根据对应的提示进行代码编写，极大地提升了代码的编程效率，如：  带有{}图标的均代表有该操作，只需输入几个单词就能完成如下代码的编写。 1234static dispatch_once_t onceToken;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2020/09/10/images/snippet01.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/10/images/snippet02.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/10/images/snippet03.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/10/images/snippet04.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/10/images/snippet05.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/10/images/snippet06.png">
+<meta property="og:updated_time" content="2020-09-13T02:55:54.781Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Xcode小技巧之Snippets">
+<meta name="twitter:description" content="Xcode中有许多小功能，可能经常被使用到，但是却没被发觉，如Xcode Snippets。 在敲代码时，经常会遇到刚敲几个字母就会有相应的提示，点击enter选中时，代码段立即显示出来，再根据对应的提示进行代码编写，极大地提升了代码的编程效率，如：  带有{}图标的均代表有该操作，只需输入几个单词就能完成如下代码的编写。 1234static dispatch_once_t onceToken;">
+<meta name="twitter:image" content="http://yoursite.com/2020/09/10/images/snippet01.png">
+
+<link rel="canonical" href="http://yoursite.com/2020/09/10/Xcode小技巧之Snippets/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Xcode小技巧之Snippets | Focus's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Focus's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/10/Xcode小技巧之Snippets/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.JPG">
+      <meta itemprop="name" content="Focus">
+      <meta itemprop="description" content="starryKey">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Focus's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Xcode小技巧之Snippets
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-09-10 23:15:14" itemprop="dateCreated datePublished" datetime="2020-09-10T23:15:14+08:00">2020-09-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-09-13 10:55:54" itemprop="dateModified" datetime="2020-09-13T10:55:54+08:00">2020-09-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Xcode/" itemprop="url" rel="index"><span itemprop="name">Xcode</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Xcode中有许多小功能，可能经常被使用到，但是却没被发觉，如<code>Xcode Snippets</code>。</p>
+<p>在敲代码时，经常会遇到刚敲几个字母就会有相应的提示，点击<code>enter</code>选中时，代码段立即显示出来，再根据对应的提示进行代码编写，极大地提升了代码的编程效率，如：</p>
+<p><img src="./../images/snippet01.png" alt="snippet"></p>
+<p>带有<code>{}</code>图标的均代表有该操作，只需输入几个单词就能完成如下代码的编写。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">static dispatch_once_t onceToken;</span><br><span class="line">dispatch_once(&amp;onceToken, ^&#123;</span><br><span class="line">    &lt;#code to be executed once#&gt;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>以上实例就是<code>Xcode Snippets</code>的应用，这是Xcode自带的一些<code>Code Snippet</code>，我们也可以自定义接下来将通过一些实例自定义一些常见的<code>Code Snippet</code>。</p>
+<h2 id="查找Code-Snippet"><a href="#查找Code-Snippet" class="headerlink" title="查找Code Snippet"></a>查找<code>Code Snippet</code></h2><p>Xcode中默认自带一些常见的<code>Code Snippet</code>，通过以下方式可以快速打开<code>Code Snippet</code>:</p>
+<ul>
+<li>1、快捷键<code>cmd + shift + L</code></li>
+<li><p>2、点击Xcode右上角的工具栏中的<code>+</code>,如下图所示：</p>
+<p>  <img src="./../images/snippet02.png" alt="snippet"></p>
+</li>
+</ul>
+<p>按照上述其中之一操作后，即可显示如下界面：</p>
+<p><img src="./../images/snippet03.png" alt="snippet"></p>
+<p>通过输入对应的字段即可查找相关的<code>Code Snippet</code>.</p>
+<h2 id="新增自定义Code-Snippet"><a href="#新增自定义Code-Snippet" class="headerlink" title="新增自定义Code Snippet"></a>新增自定义<code>Code Snippet</code></h2><p>在Xcode中，通过在源文件中右键，并点击<code>Create Code Snippet</code>,即可快速创建代码段，如下图所示：</p>
+<p><img src="./../images/snippet04.png" alt="snippet"></p>
+<p>打开面板后，通过输入对应的name、Completion,即可完成代码段的新建，如下图所示：</p>
+<p><img src="./../images/snippet05.png" alt="snippet"></p>
+<p>其中<code>Completion</code>代表代码段的简写，通过在编码时快速输入该简写，达到展示代码段的目的，如下所示：</p>
+<p><img src="./../images/snippet06.png" alt="snippet"></p>
+<h2 id="自定义常见的Code-Snippet"><a href="#自定义常见的Code-Snippet" class="headerlink" title="自定义常见的Code Snippet"></a>自定义常见的<code>Code Snippet</code></h2><p>可以将平时用经常用到，但又都是大量重读性的代码自定义成代码段，提高编写效率。如常见的属性声明、固定值等</p>
+<p><strong>01、属性声明：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//Strong</span><br><span class="line">@property (nonatomic, strong) &lt;#Class#&gt; *&lt;#object#&gt;;</span><br><span class="line">//Weak</span><br><span class="line">@property (nonatomic, weak) &lt;#Class#&gt; *&lt;#object#&gt;;</span><br><span class="line">//assign</span><br><span class="line">@property (nonatomic, assign) &lt;#Class#&gt; &lt;#property#&gt;;</span><br><span class="line">//copy</span><br><span class="line">@property (nonatomic, copy) NSString *&lt;#string#&gt;;</span><br><span class="line">//delegate</span><br><span class="line">@property (nonatomic, weak) id&lt;&lt;#protocol#&gt;&gt; &lt;#delegate#&gt;;</span><br><span class="line">//Block声明</span><br><span class="line">@property (nonatomic, copy) &lt;#returnType#&gt;(^&lt;#blockName#&gt;)(&lt;#arguments#&gt;);</span><br></pre></td></tr></table></figure>
+<p><strong>02、固定值</strong><br>罗列部分，根据需要增加</p>
+<table>
+<thead>
+<tr>
+<th>含义</th>
+<th>Completion</th>
+<th>代码段</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>屏幕宽度</td>
+<td>ksw</td>
+<td>[UIScreen mainScreen].bounds.size.width;</td>
+</tr>
+<tr>
+<td>屏幕高度</td>
+<td>ksh</td>
+<td>[UIScreen mainScreen].bounds.size.height;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>03、单例</strong></p>
+<h2 id="共享代码段"><a href="#共享代码段" class="headerlink" title="共享代码段"></a>共享代码段</h2><p>针对自定义的一些代码段会被存放在<code>~/Library/Developer/Xcode /UserData/CodeSnippets/</code>目录下，可以备份对应的文件，以便切换电脑时复用。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Xcode-iOS/" rel="tag"># Xcode iOS</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/30/数据结构与算法/" rel="prev" title="数据结构与算法">
+      <i class="fa fa-chevron-left"></i> 数据结构与算法
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#查找Code-Snippet"><span class="nav-number">1.</span> <span class="nav-text">查找Code Snippet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新增自定义Code-Snippet"><span class="nav-number">2.</span> <span class="nav-text">新增自定义Code Snippet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义常见的Code-Snippet"><span class="nav-number">3.</span> <span class="nav-text">自定义常见的Code Snippet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#共享代码段"><span class="nav-number">4.</span> <span class="nav-text">共享代码段</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Focus" src="/images/avatar.JPG">
+  <p class="site-author-name" itemprop="name">Focus</p>
+  <div class="site-description" itemprop="description">starryKey</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/starryKey" title="GitHub → https://github.com/starryKey" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:ljlin16@126.com" title="E-Mail → mailto:ljlin16@126.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      优质博主
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.ibireme.com" title="https://blog.ibireme.com" rel="noopener" target="_blank">伽蓝之堂一只魔法师的工坊</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://halfrost.com" title="https://halfrost.com" rel="noopener" target="_blank">冰霜之地</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Focus</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

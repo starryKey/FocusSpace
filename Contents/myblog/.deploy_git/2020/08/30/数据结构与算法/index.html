@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.8.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","Pisces | Gemini":240,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="数据结构是指同一数据对象中各数据元素间存在的关系。算法是解决某一特定类型问题的有限运算序列，算法的实现必须借助程序设计语言中提供的数据类型及其运算。一个算法的效率往往与数据的表现形式有关，因此数据结构的选择对数据处理的效率起着至关重要的作用。 基础入门篇作为一名iOSer，综合考虑了下，决定还是选择Swift作为学习算法的主要语言。一方面有Swift语言基础，能够减少算法学习的前期准备成本，另一方">
+<meta name="keywords" content="数据结构与算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构与算法">
+<meta property="og:url" content="http://yoursite.com/2020/08/30/数据结构与算法/index.html">
+<meta property="og:site_name" content="Focus&#39;s blog">
+<meta property="og:description" content="数据结构是指同一数据对象中各数据元素间存在的关系。算法是解决某一特定类型问题的有限运算序列，算法的实现必须借助程序设计语言中提供的数据类型及其运算。一个算法的效率往往与数据的表现形式有关，因此数据结构的选择对数据处理的效率起着至关重要的作用。 基础入门篇作为一名iOSer，综合考虑了下，决定还是选择Swift作为学习算法的主要语言。一方面有Swift语言基础，能够减少算法学习的前期准备成本，另一方">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-09-06T14:25:41.522Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据结构与算法">
+<meta name="twitter:description" content="数据结构是指同一数据对象中各数据元素间存在的关系。算法是解决某一特定类型问题的有限运算序列，算法的实现必须借助程序设计语言中提供的数据类型及其运算。一个算法的效率往往与数据的表现形式有关，因此数据结构的选择对数据处理的效率起着至关重要的作用。 基础入门篇作为一名iOSer，综合考虑了下，决定还是选择Swift作为学习算法的主要语言。一方面有Swift语言基础，能够减少算法学习的前期准备成本，另一方">
+
+<link rel="canonical" href="http://yoursite.com/2020/08/30/数据结构与算法/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>数据结构与算法 | Focus's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Focus's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/30/数据结构与算法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.JPG">
+      <meta itemprop="name" content="Focus">
+      <meta itemprop="description" content="starryKey">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Focus's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数据结构与算法
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-30 09:30:10" itemprop="dateCreated datePublished" datetime="2020-08-30T09:30:10+08:00">2020-08-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-09-06 22:25:41" itemprop="dateModified" datetime="2020-09-06T22:25:41+08:00">2020-09-06</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>数据结构是指同一数据对象中各数据元素间存在的关系。算法是解决某一特定类型问题的有限运算序列，算法的实现必须借助程序设计语言中提供的数据类型及其运算。一个算法的效率往往与数据的表现形式有关，因此数据结构的选择对数据处理的效率起着至关重要的作用。</p>
+<h1 id="基础入门篇"><a href="#基础入门篇" class="headerlink" title="基础入门篇"></a>基础入门篇</h1><p>作为一名iOSer，综合考虑了下，决定还是选择Swift作为学习算法的主要语言。一方面有Swift语言基础，能够减少算法学习的前期准备成本，另一方面，通过算法的练习，提升对Swift语言的熟练度。</p>
+<h2 id="Swift语言入门"><a href="#Swift语言入门" class="headerlink" title="Swift语言入门"></a>Swift语言入门</h2><p><strong>基础语法</strong></p>
+<p><a href="https://swiftgg.gitbook.io/swift/" target="_blank" rel="noopener">SwiftGG-The Swift Programming Language</a></p>
+<h1 id="数据结构篇"><a href="#数据结构篇" class="headerlink" title="数据结构篇"></a>数据结构篇</h1><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>数组是最基本的数据结构，可以在内存中连续存储多个相同元素，在内存中的分配也是连续的，数组中的元素通过下标进行访问，下标从0开始。在Swift中，将OC时代的NSMutableArray和NSArray统一归为Array。虽然看上去只有一种数据结构，但是它的实现其实有三种：</p>
+<ul>
+<li><p><strong>ContiguousArray<element></element></strong>：是一个比较特殊的数组，会将对应的数组存储在连续的内存区域中。如果存储的元素是结构体或枚举（值类型，栈上操作），那么<code>Array</code>和<code>ContiguousArray</code>的效率相似；如果数组中存储的元素是对象（<code>class</code>或<code>@objc</code>），而且不需要将数组桥接到Array或者传递给<code>Objective-C</code>的<code>API</code>时，那么<code>ContiguousArray</code>比<code>Array</code>更高效，而且拥有更多可预测的性能。</p>
+</li>
+<li><p><strong>Array<element></element></strong>：当存储值类型时，性能和<code>ContiguousArray</code>无差别，而且内存是连续的。但是如果存储的是对象（<code>class</code>或<code>@objc</code>），则会自动桥接到<code>Objective-C</code>中的<code>NSArray</code>。</p>
+</li>
+<li><p><strong>ArraySlice<element></element></strong>：不是数组，而是数组片段，与原数组享用同一区域，不创建新的存储空间。但是，修改ArraySlice中的元素时，不会影响到原数组。</p>
+</li>
+</ul>
+<h3 id="数组中的count和capacity"><a href="#数组中的count和capacity" class="headerlink" title="数组中的count和capacity"></a>数组中的count和capacity</h3><p>Swift中Array的count属性用于描述数组中元素的个数，而capacity用于描述数组的容量，即不分配新存储空间的数组可以包含的元素总数。如果要向数组中增加元素，并且超过其容量，则该数组必须增加其容量。为了提高数组的扩容效率，数组的容量的大小都是成倍增长，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var cArr = ContiguousArray&lt;Any&gt;(repeating: 3, count: 2)</span><br><span class="line">print(cArr.count)       // 2</span><br><span class="line">print(cArr.capacity)    // 2</span><br><span class="line">cArr.append(1)</span><br><span class="line">print(cArr.capacity)    // 4</span><br><span class="line">cArr.append(2)</span><br><span class="line">print(cArr.capacity)    // 4</span><br><span class="line">cArr.append(3)</span><br><span class="line">print(cArr.capacity)    // 8        </span><br><span class="line">// 当调用removeAll时，数组的所有空间被释放</span><br><span class="line">cArr.removeAll()</span><br><span class="line">print(cArr.count)       // 0</span><br><span class="line">print(cArr.capacity)    // 0</span><br></pre></td></tr></table></figure>
+<p>由于Swift数组将其元素连续存储在内存中，因此必须通过通过重新分配其内部存储，并且将所有元素从原先的存储中复制到新的存储中。如果事先知道需要向数组汇总添加多少个元素，则可使用<code>reserveCapacity</code>方法来预设数组中的容量，以减少数组<code>capacity</code>变化带来的影响。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var cArr = ContiguousArray&lt;Any&gt;(repeating: 3, count: 2)</span><br><span class="line">cArr.reserveCapacity(10) // 10</span><br></pre></td></tr></table></figure>
+<p>通常无需担心数组容量的问题，重新分配很少影响性能问题，Swift使用有效的重新分配方式，以便重新分配的数组在最终计数中为对数。但是如果数组非常大（例如，Mac上为千兆字节或iOS设备上为数十兆字节），或者对性能敏感的数据存入数组（音频缓冲区，需要几秒内播放），则需要考虑使用reserveCapacity避免重新分配。</p>
+<h4 id="ArraySlice注意点"><a href="#ArraySlice注意点" class="headerlink" title="ArraySlice注意点"></a>ArraySlice注意点</h4><p>ArraySlice是Array，ContiguousArray的一个切片或ArraySlice实例。ArraySlice并没有将切片的元素拷贝到新的内存中。修改ArraySlice中的值不会引起原数组的改变，同样，原数组的值修改，也不会引起ArraySlice的变化。如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">let testArr = Array(1...7)</span><br><span class="line">let middle = testArr.count / 2</span><br><span class="line">var firstHalf = testArr[..&lt;middle]</span><br><span class="line">let secondHalf = testArr[middle...]</span><br><span class="line">firstHalf[0] = 10</span><br><span class="line">print(secondHalf.startIndex) // 3</span><br><span class="line">print(testArr)               // [1, 2, 3, 4, 5, 6, 7]</span><br><span class="line">print(firstHalf)             // [10, 2, 3]</span><br><span class="line">testArr[0] = 20</span><br><span class="line">print(firstHalf)             // [10, 2, 3]</span><br><span class="line">print(testArr)               // [20, 2, 3, 4, 5, 6, 7]</span><br></pre></td></tr></table></figure>
+<p>ArraySlice的索引并总是从0开始,而是按照原数据中的索引。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(secondHalf.startIndex) // 3</span><br><span class="line">print(secondHalf[0])  // Fatal error: Index out of bounds</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Apple官方文档中指出不建议长期存储实例。因为即使原始数组的生命周期结束后，切片也会保留对较大数组整个存储的引用，而不仅仅是对其呈现的部分的引用。因此，切片的长期存储可能会延长原本无法访问的元素的寿命，这些元素似乎是内存和对象泄漏。</p>
+</blockquote>
+<h3 id="数组中的常见操作"><a href="#数组中的常见操作" class="headerlink" title="数组中的常见操作"></a>数组中的常见操作</h3><ul>
+<li><p>数组的声明</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 声明一个可变数组</span><br><span class="line">var arr1 = Array&lt;Int&gt;()</span><br><span class="line">var arr2 = [Int]()    //推荐使用</span><br><span class="line">// 声明一个不可修改的数组</span><br><span class="line">let arr3 = [1,2,3]</span><br><span class="line">let arr4 = [Int](repeating: 0, count: 3)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>增加一个元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr1.append(1)</span><br><span class="line">或</span><br><span class="line">arr1 += [1]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除一个元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr1.remove(at: 0)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改一个元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr1[1] = 6</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>取出一个元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var value = arr1[0]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>遍历</p>
+</li>
+</ul>
+<p>常用方式一：<strong>forEach</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr1.forEach &#123; (value) in</span><br><span class="line">    print(value)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>常用方式二：<strong>for…in</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">for i in 0..&lt;arr1.count - 1 &#123;</span><br><span class="line">    print(i)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 枚举遍历</span><br><span class="line">for (index, value) in arr1.enumerated() &#123;</span><br><span class="line">    print(&quot;\(index): &apos;\(value)&apos;&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>区别：</p>
+<h2 id="字典与集合"><a href="#字典与集合" class="headerlink" title="字典与集合"></a>字典与集合</h2><h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h2 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h2><h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><h1 id="基础算法篇"><a href="#基础算法篇" class="headerlink" title="基础算法篇"></a>基础算法篇</h1><p>二分查找，排序算法， 动态规划</p>
+<h1 id="算法思维篇"><a href="#算法思维篇" class="headerlink" title="算法思维篇"></a>算法思维篇</h1><p>数据结构和算法思维的目的都是为了降低时间复杂度。数据结构是从数据组织形式的角度去达成这个目标，而算法思维则是从数据处理的思路上去达成这个目标。如果数据处理的逻辑上出现缺陷，即使通过高效的数据处理解决了问题，但是会产生很多无效的计算，造成时间浪费。</p>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><blockquote>
+<p>排序是指让一组无序数据变成有序的过程，一般默认有序为从小到大的排列顺序。</p>
+</blockquote>
+<p><strong>衡量排序算法优劣的方式</strong></p>
+<ul>
+<li>时间复杂度<ul>
+<li>包括最好时间复杂度、最坏时间复杂度和平均时间复杂度。</li>
+</ul>
+</li>
+<li>空间复杂度<ul>
+<li>如果空间复杂度为1，也称为原地排序。</li>
+</ul>
+</li>
+<li>稳定性<ul>
+<li>指相等的数据对象，在排序后，顺序是否保持不变。</li>
+</ul>
+</li>
+</ul>
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p><strong>原理</strong><br>从第一个数据开始，依次比较相邻元素的大小，如果前者大于后者，这交换两个元素的位置，将大的元素排到后面，通过多轮迭代，直到不用交换为止。</p>
+<p><strong>性能</strong></p>
+<ul>
+<li><strong>时间复杂度</strong><ul>
+<li>最好时间复杂度：<strong>O(n)</strong><ul>
+<li>即当数据刚好是顺序排序时，只要挨个比较一般即可。</li>
+</ul>
+</li>
+<li>最坏时间复杂度：<strong>O(n*n)</strong><ul>
+<li>即当数据刚好逆序时，每轮排序都需要比较n次，并且重复n次。</li>
+</ul>
+</li>
+<li>平均时间复杂度: <strong>O(n*n)</strong><ul>
+<li>即数据杂乱无章时</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>空间复杂度</strong><ul>
+<li><strong>O(1)</strong>：不占用额外的空间</li>
+</ul>
+</li>
+</ul>
+<p><strong>代码实现</strong><br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 冒泡排序(Swift)</span><br><span class="line">func bubbleSort() &#123;</span><br><span class="line">    var list = [-1,2,4,1,0,9,6,7]</span><br><span class="line">    for i in 1..&lt;list.count &#123;</span><br><span class="line">        for j in 0..&lt;(i - 1) &#123;</span><br><span class="line">            if list[j] &gt; list[j + 1] &#123;</span><br><span class="line">                let temp = list[j]</span><br><span class="line">                list[j] = list[j + 1]</span><br><span class="line">                list[j+1] = temp</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    print(list)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><p><strong>原理</strong><br>选取未排序的数据插入到已排序区间的合适位置，直到未排序区间为空。</p>
+<p><strong>性能</strong></p>
+<ul>
+<li><strong>时间复杂度</strong><ul>
+<li>最好时间复杂度：<strong>O(n)</strong><ul>
+<li>即当数据刚好是顺序排序时，每次只用比较一次就能找到正确的位置。</li>
+</ul>
+</li>
+<li>最坏时间复杂度：<strong>O(n*n)</strong><ul>
+<li>即当数据刚好完全逆序时，每轮排序都需要比较n次才能找到正确的位置区间。</li>
+</ul>
+</li>
+<li>平均时间复杂度: <strong>O(n*n)</strong><ul>
+<li>因为往数组中插入一个元素的平均时间复杂度为O(n),而插入排序可以理解为重复n次的数组插入操作</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>空间复杂度</strong><ul>
+<li><strong>O(1)</strong>：不占用额外的空间。</li>
+</ul>
+</li>
+</ul>
+<h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><ul>
+<li>二分查找的时间复杂度是O(logn)。</li>
+<li>二分查找的循环次数并不确定。一般是达到某个条件就跳出循环。因此编码的时候，多数采用while循环加break跳出代码结构。</li>
+<li>二分查找处理的原问题必须是有序的。</li>
+</ul>
+<h3 id="二叉树搜索"><a href="#二叉树搜索" class="headerlink" title="二叉树搜索"></a>二叉树搜索</h3><h2 id="递归思维"><a href="#递归思维" class="headerlink" title="递归思维"></a>递归思维</h2><blockquote>
+<p>递归是指在函数的定义中使用函数自身的方法，即自己调用自己。递归的基本思想就是把规模大的问题转化为规模小的相同的子问题来解决。递归的实现包含两部分，一是递归主体，而是终止条件。</p>
+</blockquote>
+<p>递归的数学模型是<a href="https://zh.wikipedia.org/wiki/%E6%95%B0%E5%AD%A6%E5%BD%92%E7%BA%B3%E6%B3%95" target="_blank" rel="noopener">数学归纳法</a>。当一个问题满足如下的两个条件时，就可以使用递归的方法求解：</p>
+<ul>
+<li>1、可以拆解为除了数据规模之外，求解思路完全相同的方法求解；</li>
+<li>2、存在终止条件。</li>
+</ul>
+<p>递归的核心思想是把规模大的问题转化为规模小的相似的子问题来解决。<br>例子：通过递归求解汉诺塔问题：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">func hannio(n: Int, x: String, y: String, z: String) &#123;</span><br><span class="line">    if n &lt; 1 &#123;</span><br><span class="line">        print(&quot;汉诺塔的层数不能小于1&quot;)</span><br><span class="line">    &#125; else if (n == 1) &#123;</span><br><span class="line">        print(&quot;移动：&quot; + x + &quot;-&gt;&quot; + z)</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        hannio(n: n - 1, x: x, y: z, z: y)</span><br><span class="line">        print(&quot;移动：&quot; + x + &quot;-&gt;&quot; + z)</span><br><span class="line">        hannio(n: n - 1, x: y, y: x, z: z)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="分治法"><a href="#分治法" class="headerlink" title="分治法"></a>分治法</h2><blockquote>
+<p>分治法的核心思想是“分而治之”，就是把一个规模大、高难度的问题，分解为若干个小规模、低难度的小问题，再针对小的问题，逐一击破。</p>
+</blockquote>
+<h3 id="分治法的使用方法"><a href="#分治法的使用方法" class="headerlink" title="分治法的使用方法"></a>分治法的使用方法</h3><p>当使用分治法解决问题时，一般原问题都需要具备以下几个特征：</p>
+<ul>
+<li><strong>1、难度在降低</strong>：即原问题的解决难度，随着数据的规模的缩小而降低。</li>
+<li><strong>2、问题可分</strong>：原问题可以分解为若干个规模较小的同类型问题。</li>
+<li><strong>3、解可合并</strong>：利用所有子问题的解，可合并出原问题的解。</li>
+<li><strong>4、相互独立</strong>：各个子问题之间相互独立，某个子问题的求解不会影响到另一个子问题。如果子问题之间不独立，则分治法需要重复地解决公共的子问题，造成效率低下的结果。</li>
+</ul>
+<p>分治法的常见实例为二分查找。二分查找的步骤如下：</p>
+<ul>
+<li>1、选择一个标志i将集合L分为二个子集，一般为中位数；</li>
+<li>2、判断标志L(i)是否能够与要查找的值des相等，相等则直接返回结果；</li>
+<li>3、如果不相等，需要判断L(i)与des的大小；</li>
+<li>4、基于判断的结果决定下不步是向左查找还是向右查找。如果向某个方向查找的空间为0，则返回结果未找到。</li>
+<li>5、回到步骤1。<br>二分查找最差的情况是找到最后一个数字才完成，那么此时的最大的复杂度为O(logn)。<br>分治法的例子：在有序数组[1,2,3,4,5,6,7,8,9]中查找8有没有出现过：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">func findValue(_ list:[Int], _ targrt:Int) -&gt; Bool &#123;</span><br><span class="line">    var middle = 0, low = 0, high = list.count - 1</span><br><span class="line">    var isFind = false</span><br><span class="line">    while (low &lt; high) &#123;</span><br><span class="line">        middle = (high + low) / 2</span><br><span class="line">        if list[middle] == targrt &#123;</span><br><span class="line">            print(String(format: &quot;😄找到了,哈哈哈,index:%@&quot;, String(middle)))</span><br><span class="line">            isFind = true</span><br><span class="line">            break</span><br><span class="line">        &#125; else if (list[middle] &gt; targrt) &#123;</span><br><span class="line">            // 说明在左侧 low -&gt; middle - 1之间</span><br><span class="line">            high = middle - 1</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            // 说明在右侧 middle -&gt; high 之间</span><br><span class="line">            low = middle + 1</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    if !isFind &#123;</span><br><span class="line">        print(&quot;😠没找到，呜呜呜呜&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">    return isFind</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>规律</strong></p>
+<ul>
+<li>二分法查找的时间复杂度是O(logn)，这也是分治法普遍具备的特征。当约束了时间复杂度为O(logn)或O(nlogn)时，可以考虑分治法是否可行。</li>
+<li>二分查找的循环次数并不确定。一般是达到某个条件就跳出循环。通常采用while循环加break的代码结构</li>
+<li>二分查找处理的原问题必须是有序的。</li>
+</ul>
+<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><blockquote>
+<p>动态规划问题之所以难，是因为动态规划的解题方法并没有那么标准化，需要因题而异，仔细分析问题并寻找解决方案。</p>
+</blockquote>
+<h2 id="感谢与推荐"><a href="#感谢与推荐" class="headerlink" title="感谢与推荐"></a>感谢与推荐</h2><ul>
+<li><a href="https://kaiwu.lagou.com/course/courseInfo.htm?courseId=185#/content" target="_blank" rel="noopener">重学数据结构与算法</a></li>
+<li><a href="https://greyireland.gitbook.io/algorithm-pattern/" target="_blank" rel="noopener">algorithm-pattern</a></li>
+<li><a href="https://books.halfrost.com/leetcode/" target="_blank" rel="noopener">冰霜LeetCodeCookBook</a></li>
+<li><a href="https://github.com/MisterBooo/LeetCodeAnimation" target="_blank" rel="noopener">LeetCodeAnimation</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/数据结构与算法/" rel="tag"># 数据结构与算法</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/23/时间复杂度/" rel="prev" title="时间复杂度">
+      <i class="fa fa-chevron-left"></i> 时间复杂度
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/09/10/Xcode小技巧之Snippets/" rel="next" title="Xcode小技巧之Snippets">
+      Xcode小技巧之Snippets <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基础入门篇"><span class="nav-number">1.</span> <span class="nav-text">基础入门篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Swift语言入门"><span class="nav-number">1.1.</span> <span class="nav-text">Swift语言入门</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据结构篇"><span class="nav-number">2.</span> <span class="nav-text">数据结构篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组"><span class="nav-number">2.1.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组中的count和capacity"><span class="nav-number">2.1.1.</span> <span class="nav-text">数组中的count和capacity</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ArraySlice注意点"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">ArraySlice注意点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组中的常见操作"><span class="nav-number">2.1.2.</span> <span class="nav-text">数组中的常见操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字典与集合"><span class="nav-number">2.2.</span> <span class="nav-text">字典与集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串"><span class="nav-number">2.3.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栈和队列"><span class="nav-number">2.4.</span> <span class="nav-text">栈和队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链表"><span class="nav-number">2.5.</span> <span class="nav-text">链表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树"><span class="nav-number">2.6.</span> <span class="nav-text">二叉树</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基础算法篇"><span class="nav-number">3.</span> <span class="nav-text">基础算法篇</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#算法思维篇"><span class="nav-number">4.</span> <span class="nav-text">算法思维篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#排序"><span class="nav-number">4.1.</span> <span class="nav-text">排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#冒泡排序"><span class="nav-number">4.1.1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入排序"><span class="nav-number">4.1.2.</span> <span class="nav-text">插入排序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查找"><span class="nav-number">4.2.</span> <span class="nav-text">查找</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二分查找"><span class="nav-number">4.2.1.</span> <span class="nav-text">二分查找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二叉树搜索"><span class="nav-number">4.2.2.</span> <span class="nav-text">二叉树搜索</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归思维"><span class="nav-number">4.3.</span> <span class="nav-text">递归思维</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分治法"><span class="nav-number">4.4.</span> <span class="nav-text">分治法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分治法的使用方法"><span class="nav-number">4.4.1.</span> <span class="nav-text">分治法的使用方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态规划"><span class="nav-number">4.5.</span> <span class="nav-text">动态规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感谢与推荐"><span class="nav-number">4.6.</span> <span class="nav-text">感谢与推荐</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Focus" src="/images/avatar.JPG">
+  <p class="site-author-name" itemprop="name">Focus</p>
+  <div class="site-description" itemprop="description">starryKey</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/starryKey" title="GitHub → https://github.com/starryKey" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:ljlin16@126.com" title="E-Mail → mailto:ljlin16@126.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      优质博主
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.ibireme.com" title="https://blog.ibireme.com" rel="noopener" target="_blank">伽蓝之堂一只魔法师的工坊</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://halfrost.com" title="https://halfrost.com" rel="noopener" target="_blank">冰霜之地</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Focus</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

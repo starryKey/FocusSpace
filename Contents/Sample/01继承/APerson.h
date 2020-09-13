@@ -12,9 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface APerson : NSObject
 
-
-
-
+// Completion值 ksh
+// 属性的声明
 
 @end
 

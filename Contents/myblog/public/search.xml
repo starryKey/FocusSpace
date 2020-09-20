@@ -4,38 +4,13 @@
   
     
     <entry>
-      <title>Mac上使用Hexo搭建博客</title>
-      <link href="/2020/09/16/hello-world/"/>
-      <url>/2020/09/16/hello-world/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Mac上使用Hexo搭建博客"><a href="#Mac上使用Hexo搭建博客" class="headerlink" title="Mac上使用Hexo搭建博客"></a>Mac上使用Hexo搭建博客</h1><h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><ul><li>安装<code>node.js</code></li><li>安装<code>Git</code><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2>终端中执行如下命令进行安装:</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>安装完成后，执行如下命令，Hexo将会在指定的文件夹下创建所需的文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure><h2 id="创建主题"><a href="#创建主题" class="headerlink" title="创建主题"></a>创建主题</h2><p>使用如下命令下载主题,如next主题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd themes/</span><br><span class="line">git init</span><br><span class="line">git clone https://github.com/iissnan/hexo-theme-next.git</span><br></pre></td></tr></table></figure></p><h2 id="常见操作"><a href="#常见操作" class="headerlink" title="常见操作"></a>常见操作</h2><ul><li><p>启动服务</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></li><li><p>创建新文章</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;My New Post&quot;</span><br><span class="line">执行完后，Hexo\source_posts中多了一个文件博名.md，也可直接进入Hexo\source_posts中创建.md文件</span><br></pre></td></tr></table></figure></li><li><p>生成静态资源</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure></li><li><p>发布博文</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></li><li><p>清理</p><pre><code>hexo clean</code></pre></li><li>快捷指令<ul><li>hexo g == hexo generate</li><li>hexo d == hexo deploy</li><li>hexo s == hexo server</li><li>hexo n == hexo new  </li></ul></li></ul>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Xcode小技巧之Snippets</title>
-      <link href="/2020/09/10/Xcode%E5%B0%8F%E6%8A%80%E5%B7%A7%E4%B9%8BSnippets/"/>
-      <url>/2020/09/10/Xcode%E5%B0%8F%E6%8A%80%E5%B7%A7%E4%B9%8BSnippets/</url>
+      <title>Xcode小技巧之Snippet</title>
+      <link href="/2020/09/20/Xcode%E5%B0%8F%E6%8A%80%E5%B7%A7%E4%B9%8BSnippet/"/>
+      <url>/2020/09/20/Xcode%E5%B0%8F%E6%8A%80%E5%B7%A7%E4%B9%8BSnippet/</url>
       
         <content type="html"><![CDATA[<p>Xcode中有许多小功能，可能经常被使用到，但是却没被发觉，如<code>Xcode Snippets</code>。</p><p>在敲代码时，经常会遇到刚敲几个字母就会有相应的提示，点击<code>enter</code>选中时，代码段立即显示出来，再根据对应的提示进行代码编写，极大地提升了代码的编程效率，如：</p><p><img src="./../images/snippet01.png" alt="snippet"></p><p>带有<code>{}</code>图标的均代表有该操作，只需输入几个单词就能完成如下代码的编写。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">static dispatch_once_t onceToken;</span><br><span class="line">dispatch_once(&amp;onceToken, ^&#123;</span><br><span class="line">    &lt;#code to be executed once#&gt;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p>以上实例就是<code>Xcode Snippets</code>的应用，这是Xcode自带的一些<code>Code Snippet</code>，我们也可以自定义接下来将通过一些实例自定义一些常见的<code>Code Snippet</code>。</p><h2 id="查找Code-Snippet"><a href="#查找Code-Snippet" class="headerlink" title="查找Code Snippet"></a>查找<code>Code Snippet</code></h2><p>Xcode中默认自带一些常见的<code>Code Snippet</code>，通过以下方式可以快速打开<code>Code Snippet</code>:</p><ul><li>1、快捷键<code>cmd + shift + L</code></li><li><p>2、点击Xcode右上角的工具栏中的<code>+</code>,如下图所示：</p><p>  <img src="./../images/snippet02.png" alt="snippet"></p></li></ul><p>按照上述其中之一操作后，即可显示如下界面：</p><p><img src="./../images/snippet03.png" alt="snippet"></p><p>通过输入对应的字段即可查找相关的<code>Code Snippet</code>.</p><h2 id="新增自定义Code-Snippet"><a href="#新增自定义Code-Snippet" class="headerlink" title="新增自定义Code Snippet"></a>新增自定义<code>Code Snippet</code></h2><p>在Xcode中，通过在源文件中右键，并点击<code>Create Code Snippet</code>,即可快速创建代码段，如下图所示：</p><p><img src="./../images/snippet04.png" alt="snippet"></p><p>打开面板后，通过输入对应的name、Completion,即可完成代码段的新建，如下图所示：</p><p><img src="./../images/snippet05.png" alt="snippet"></p><p>其中<code>Completion</code>代表代码段的简写，通过在编码时快速输入该简写，达到展示代码段的目的，如下所示：</p><p><img src="./../images/snippet06.png" alt="snippet"></p><h2 id="自定义常见的Code-Snippet"><a href="#自定义常见的Code-Snippet" class="headerlink" title="自定义常见的Code Snippet"></a>自定义常见的<code>Code Snippet</code></h2><p>可以将平时用经常用到，但又都是大量重读性的代码自定义成代码段，提高编写效率。如常见的属性声明、固定值等</p><p><strong>01、属性声明：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//Strong</span><br><span class="line">@property (nonatomic, strong) &lt;#Class#&gt; *&lt;#object#&gt;;</span><br><span class="line">//Weak</span><br><span class="line">@property (nonatomic, weak) &lt;#Class#&gt; *&lt;#object#&gt;;</span><br><span class="line">//assign</span><br><span class="line">@property (nonatomic, assign) &lt;#Class#&gt; &lt;#property#&gt;;</span><br><span class="line">//copy</span><br><span class="line">@property (nonatomic, copy) NSString *&lt;#string#&gt;;</span><br><span class="line">//delegate</span><br><span class="line">@property (nonatomic, weak) id&lt;&lt;#protocol#&gt;&gt; &lt;#delegate#&gt;;</span><br><span class="line">//Block声明</span><br><span class="line">@property (nonatomic, copy) &lt;#returnType#&gt;(^&lt;#blockName#&gt;)(&lt;#arguments#&gt;);</span><br></pre></td></tr></table></figure><p><strong>02、固定值</strong><br>罗列部分，根据需要增加</p><table><thead><tr><th>含义</th><th>Completion</th><th>代码段</th></tr></thead><tbody><tr><td>屏幕宽度</td><td>ksw</td><td>[UIScreen mainScreen].bounds.size.width;</td></tr><tr><td>屏幕高度</td><td>ksh</td><td>[UIScreen mainScreen].bounds.size.height;</td></tr></tbody></table><p><strong>03、单例</strong></p><h2 id="共享代码段"><a href="#共享代码段" class="headerlink" title="共享代码段"></a>共享代码段</h2><p>针对自定义的一些代码段会被存放在<code>~/Library/Developer/Xcode /UserData/CodeSnippets/</code>目录下，可以备份对应的文件，以便切换电脑时复用。</p>]]></content>
       
       
-      <categories>
-          
-          <category> Xcode </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Xcode iOS </tag>
-            
-        </tags>
       
     </entry>
     
@@ -86,11 +61,24 @@
     
     
     <entry>
+      <title>Mac上使用Hexo搭建博客</title>
+      <link href="/2020/08/16/hello-world/"/>
+      <url>/2020/08/16/hello-world/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Mac上使用Hexo搭建博客"><a href="#Mac上使用Hexo搭建博客" class="headerlink" title="Mac上使用Hexo搭建博客"></a>Mac上使用Hexo搭建博客</h1><h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><ul><li>安装<code>node.js</code></li><li>安装<code>Git</code><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2>终端中执行如下命令进行安装:</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>安装完成后，执行如下命令，Hexo将会在指定的文件夹下创建所需的文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure><h2 id="创建主题"><a href="#创建主题" class="headerlink" title="创建主题"></a>创建主题</h2><p>使用如下命令下载主题,如next主题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd themes/</span><br><span class="line">git init</span><br><span class="line">git clone https://github.com/iissnan/hexo-theme-next.git</span><br></pre></td></tr></table></figure></p><h2 id="常见操作"><a href="#常见操作" class="headerlink" title="常见操作"></a>常见操作</h2><ul><li><p>启动服务</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></li><li><p>创建新文章</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;My New Post&quot;</span><br><span class="line">执行完后，Hexo\source_posts中多了一个文件博名.md，也可直接进入Hexo\source_posts中创建.md文件</span><br></pre></td></tr></table></figure></li><li><p>生成静态资源</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure></li><li><p>发布博文</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></li><li><p>清理</p><pre><code>hexo clean</code></pre></li><li>快捷指令<ul><li>hexo g == hexo generate</li><li>hexo d == hexo deploy</li><li>hexo s == hexo server</li><li>hexo n == hexo new  </li></ul></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>focus</title>
       <link href="/2019/05/09/focus/"/>
       <url>/2019/05/09/focus/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="测试-哈哈哈哈😄"><a href="#测试-哈哈哈哈😄" class="headerlink" title="测试 哈哈哈哈😄"></a>测试 哈哈哈哈😄</h2>]]></content>
       
       
       

@@ -165,6 +165,102 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/16/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.JPG">
+      <meta itemprop="name" content="Focus">
+      <meta itemprop="description" content="starryKey">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Focus's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/09/16/hello-world/" class="post-title-link" itemprop="url">Mac上使用Hexo搭建博客</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-09-16 09:30:10" itemprop="dateCreated datePublished" datetime="2020-09-16T09:30:10+08:00">2020-09-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-09-20 21:40:17" itemprop="dateModified" datetime="2020-09-20T21:40:17+08:00">2020-09-20</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Mac上使用Hexo搭建博客"><a href="#Mac上使用Hexo搭建博客" class="headerlink" title="Mac上使用Hexo搭建博客"></a>Mac上使用Hexo搭建博客</h1><h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><ul>
+<li>安装<code>node.js</code></li>
+<li>安装<code>Git</code><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2>终端中执行如下命令进行安装:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>安装完成后，执行如下命令，Hexo将会在指定的文件夹下创建所需的文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<h2 id="创建主题"><a href="#创建主题" class="headerlink" title="创建主题"></a>创建主题</h2><p>使用如下命令下载主题,如next主题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd themes/</span><br><span class="line">git init</span><br><span class="line">git clone https://github.com/iissnan/hexo-theme-next.git</span><br></pre></td></tr></table></figure></p>
+<h2 id="常见操作"><a href="#常见操作" class="headerlink" title="常见操作"></a>常见操作</h2><ul>
+<li><p>启动服务</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建新文章</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;My New Post&quot;</span><br><span class="line">执行完后，Hexo\source_posts中多了一个文件博名.md，也可直接进入Hexo\source_posts中创建.md文件</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成静态资源</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>发布博文</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>清理</p>
+<pre><code>hexo clean
+</code></pre></li>
+<li>快捷指令<ul>
+<li>hexo g == hexo generate</li>
+<li>hexo d == hexo deploy</li>
+<li>hexo s == hexo server</li>
+<li>hexo n == hexo new  </li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/10/Xcode小技巧之Snippets/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -634,73 +730,15 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-05-09 19:58:37 / 修改时间：20:01:19" itemprop="dateCreated datePublished" datetime="2019-05-09T19:58:37+08:00">2019-05-09</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="测试-哈哈哈哈😄"><a href="#测试-哈哈哈哈😄" class="headerlink" title="测试 哈哈哈哈😄"></a>测试 哈哈哈哈😄</h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/09/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.JPG">
-      <meta itemprop="name" content="Focus">
-      <meta itemprop="description" content="starryKey">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Focus's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/05/09/hello-world/" class="post-title-link" itemprop="url">Mac上使用Hexo搭建博客</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-05-09 19:51:26" itemprop="dateCreated datePublished" datetime="2019-05-09T19:51:26+08:00">2019-05-09</time>
+              <time title="创建时间：2019-05-09 19:58:37" itemprop="dateCreated datePublished" datetime="2019-05-09T19:58:37+08:00">2019-05-09</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-20 21:25:11" itemprop="dateModified" datetime="2020-09-20T21:25:11+08:00">2020-09-20</time>
+                <time title="修改时间：2020-09-20 21:39:51" itemprop="dateModified" datetime="2020-09-20T21:39:51+08:00">2020-09-20</time>
               </span>
 
           
@@ -714,39 +752,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Mac上使用Hexo搭建博客"><a href="#Mac上使用Hexo搭建博客" class="headerlink" title="Mac上使用Hexo搭建博客"></a>Mac上使用Hexo搭建博客</h1><h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><ul>
-<li>安装<code>node.js</code></li>
-<li>安装<code>Git</code><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2>终端中执行如下命令进行安装:</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>安装完成后，执行如下命令，Hexo将会在指定的文件夹下创建所需的文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<h2 id="创建主题"><a href="#创建主题" class="headerlink" title="创建主题"></a>创建主题</h2><p>使用如下命令下载主题,如next主题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd themes/</span><br><span class="line">git init</span><br><span class="line">git clone https://github.com/iissnan/hexo-theme-next.git</span><br></pre></td></tr></table></figure></p>
-<h2 id="常见操作"><a href="#常见操作" class="headerlink" title="常见操作"></a>常见操作</h2><ul>
-<li><p>启动服务</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建新文章</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;My New Post&quot;</span><br><span class="line">执行完后，Hexo\source_posts中多了一个文件博名.md，也可直接进入Hexo\source_posts中创建.md文件</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>生成静态资源</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>发布博文</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>清理</p>
-<pre><code>hexo clean
-</code></pre></li>
-<li>快捷指令<ul>
-<li>hexo g == hexo generate</li>
-<li>hexo d == hexo deploy</li>
-<li>hexo s == hexo server</li>
-<li>hexo n == hexo new  </li>
-</ul>
-</li>
-</ul>
-
+          
       
     </div>
 

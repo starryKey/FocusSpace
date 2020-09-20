@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "APerson.h"
+#import "BPerson.h"
+#import "CPerson.h"
 
 @interface ViewController ()
 
@@ -17,10 +20,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [UIScreen mainScreen].bounds.size.width;
-    [UIScreen mainScreen].bounds.size.height;
+    APerson * ap = [[APerson alloc] init];
+    [ap play];
+    [ap method1];
+    [ap method2];
+    [ap method3];
+    NSLog(@"-------->01");
     
+    BPerson * bp = [[BPerson alloc] init];
+    [bp method1];
+    [bp method2];
+    [bp method3];
+    NSLog(@"-------->02");
     
+    CPerson * cp = [[CPerson alloc] init];
+    [cp method1];
+    [cp method2];
+    [cp method3];
 }
 
 

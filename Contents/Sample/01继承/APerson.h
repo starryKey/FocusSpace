@@ -15,6 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 // Completion值 ksh
 // 属性的声明
 
+-(void)play;
+
+-(void)method1;
+-(void)method2;
+-(void)method3;
+
 @end
 
 

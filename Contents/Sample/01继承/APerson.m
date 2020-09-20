@@ -13,17 +13,18 @@
 #pragma mark delegate
 
 
-- (void)play{
+-(void)play{
+    NSLog(@"%@---%s", [APerson class],__FUNCTION__);
+}
 
-    
-    
-    
-
-    
-    
-    
-    
-    
+-(void)method1{
+   NSLog(@"---%s",__FUNCTION__);
+}
+-(void)method2{
+    NSLog(@"---%s",__FUNCTION__);
+}
+-(void)method3{
+    NSLog(@"---%s",__FUNCTION__);
 }
 
 

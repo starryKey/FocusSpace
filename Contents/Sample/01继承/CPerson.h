@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CPerson : BPerson
 
+-(void)play;
+
 @end
 
 NS_ASSUME_NONNULL_END

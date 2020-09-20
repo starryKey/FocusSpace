@@ -10,4 +10,22 @@
 
 @implementation BPerson
 
+-(void)play{
+    NSLog(@"%@---%s", [BPerson class],__FUNCTION__);
+}
+
+-(void)method1{
+   NSLog(@"---%s",__FUNCTION__);
+}
+
+-(void)method3{
+    NSLog(@"---%s",__FUNCTION__);
+    
+    [self method1];
+    [self method2];
+    NSLog(@"---");
+    [super method1];
+}
+
+
 @end

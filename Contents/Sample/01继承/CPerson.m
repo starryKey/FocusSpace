@@ -10,4 +10,11 @@
 
 @implementation CPerson
 
+-(void)play{
+    NSLog(@"%@---%s", [CPerson class],__FUNCTION__);
+}
+-(void)method2{
+    NSLog(@"---%s",__FUNCTION__);
+}
+
 @end

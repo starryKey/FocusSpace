@@ -37,9 +37,28 @@
 }
 
 - (void)testAction{
-    Person * p = [[Person alloc] init];
-    NSLog(@"retainCount: %lu",[p retainCount]);
-    [p release];
+    // MRC
+    Person * p1 = [[Person alloc] init];   //引用计数为1
+    Person * p2 = nil;
+    p2 = p1;      //直接赋值并不能使引用计数+1
+    [p2 retain];  //只有给对象发送retain时，引用计数才会+1
+    NSLog(@"retainCount: %lu",[p1 retainCount]); //引用计数为2
+    [p1 release];     //引用计数为1
+    [p2 playSoccer];  //对象未被释放，程序正常运行
+    
+    id pool = [[NSAutoreleasePool alloc] init];
+    Person * pA = [[Person alloc] init];
+    [pA autorelease];   // 将对象放入自动释放池pool中
+    Person * pB = pA;
+    [pB retain];        // 如果没有该步骤，引用计数为1
+    NSLog(@"pool release前：retainCount: %lu",[pA retainCount]); //pA引用计数为2
+    [pool release]; //销毁自动释放池，自动释放池中所有的对象也被销毁。此时pA引用计数减1
+    NSLog(@"pool release后：retainCount: %lu",[pA retainCount]); //pA引用计数为1
+    
+    __weak NSObject * obj;
+}
+- (IBAction)testAction:(UIButton *)sender {
+    
 }
 
 @end

@@ -8,7 +8,11 @@
 
 #import "Person.h"
 
+
+
 @implementation Person
+
+@synthesize name;
 
 - (instancetype)init
 {
@@ -28,6 +32,11 @@
     
 }
 
+- (void)setName:(NSString *)newName{
+    [newName retain];   //可省略
+    [name release];     //可省略
+    name = newName;
+}
 
 
 

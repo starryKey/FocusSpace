@@ -60,3 +60,49 @@ git clone https://github.com/iissnan/hexo-theme-next.git
     - hexo d == hexo deploy
     - hexo s == hexo server
     - hexo n == hexo new  
+
+
+- 增加分类
+
+    在categories文件夹下的markdown文件中，根据需求可创建一些分类，如：
+    ```
+    ---
+    title: 文章分类
+    type: "categories"
+    ---
+
+    - iOS
+    - Web
+    - 数据结构与算法
+    ```
+    然后在创建的文章头部增加对应的categories即可，如：
+   
+    ```
+    ---
+    title: 时间复杂度
+    date: 2020-08-23 13:50:17
+    tags: 数据结构与算法
+    categories:
+        - 数据结构与算法
+    ---
+     ```
+    - 增加标签
+    在tags文件夹下的markdown文件中，根据需求可创建一些标签，如：
+    ```
+    ---
+    title: 文章标签
+    date: 2020-08-23 13:53:14
+    type: "tags"
+    ---
+
+    - 数据结构与算法
+    - iOS
+    ```
+    然后在创建的文章顶部增加对应的tags即可，如：
+    ```
+    ---
+    title: 时间复杂度
+    date: 2020-08-23 13:50:17
+    tags: 数据结构与算法
+    ---
+     ```

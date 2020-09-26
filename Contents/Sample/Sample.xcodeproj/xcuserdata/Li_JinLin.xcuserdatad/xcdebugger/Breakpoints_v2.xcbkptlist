@@ -39,65 +39,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F9521CA0-65EC-4B3B-8448-B3D5BB6D4B80"
+            uuid = "2842B686-504A-42BE-A13B-51584D0772DF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "03&#x5185;&#x5b58;&#x7ba1;&#x7406;/Person.m"
+            filePath = "04&#x5c5e;&#x6027;&#x58f0;&#x660e;/Engineer.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "-dealloc"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "+testAction:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "118D1EFC-388C-47B7-93C1-3C965A6985AB"
+            uuid = "1ED467D8-3E07-443D-AA4C-C79A7729F479"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "03&#x5185;&#x5b58;&#x7ba1;&#x7406;/ViewController.m"
+            filePath = "04&#x5c5e;&#x6027;&#x58f0;&#x660e;/Engineer.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "-testAction"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "-testInsMethod:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5BA6CD18-F4B7-484D-A860-EE14E20927C9"
+            uuid = "502DD42D-A67A-4028-B554-9E40ACFAAB79"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "03&#x5185;&#x5b58;&#x7ba1;&#x7406;/ViewController.m"
+            filePath = "04&#x5c5e;&#x6027;&#x58f0;&#x660e;/Person.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "-testInsMethod:"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "693BB28D-8A29-4BC6-BB90-62A809379C37"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "03&#x5185;&#x5b58;&#x7ba1;&#x7406;/main.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "main(argc, argv)"
-            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

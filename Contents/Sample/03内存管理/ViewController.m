@@ -55,6 +55,12 @@
     [pool release]; //销毁自动释放池，自动释放池中所有的对象也被销毁。此时pA引用计数减1
     NSLog(@"pool release后：retainCount: %lu",[pA retainCount]); //pA引用计数为1
     
+    NSMutableArray * testArr = [NSMutableArray arrayWithObjects:pA, pA, pA,nil];
+    NSLog(@"%@--> retainCount: %lu", testArr, [pA retainCount]);
+    [testArr addObject:pA];
+    NSLog(@"%@--> retainCount: %lu", testArr, [pA retainCount]);
+    
+    
     __weak NSObject * obj;
 }
 - (IBAction)testAction:(UIButton *)sender {

@@ -10,13 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Person : NSObject<NSCopying>
+@interface Person : NSObject<NSCopying, NSCoding>
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) NSUInteger age;
 
-
+// 对象的拷贝
 - (nonnull id)copyWithZone:(nullable NSZone *)zone;
+// 归档
 
 @end
 

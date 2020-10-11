@@ -54,6 +54,16 @@
 		E726C38F251A499B00E8C14A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E726C38E251A499B00E8C14A /* Assets.xcassets */; };
 		E726C392251A499B00E8C14A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E726C390251A499B00E8C14A /* LaunchScreen.storyboard */; };
 		E726C395251A499B00E8C14A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E726C394251A499B00E8C14A /* main.m */; };
+		E76039B9252D5C7700F0C386 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E76039B8252D5C7700F0C386 /* Person.m */; };
+		E76039BC252D5DB600F0C386 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = E76039BB252D5DB600F0C386 /* Student.m */; };
+		E76039C5252DA09F00F0C386 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E76039C4252DA09F00F0C386 /* AppDelegate.m */; };
+		E76039C8252DA09F00F0C386 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E76039C7252DA09F00F0C386 /* SceneDelegate.m */; };
+		E76039CB252DA09F00F0C386 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E76039CA252DA09F00F0C386 /* ViewController.m */; };
+		E76039CE252DA09F00F0C386 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76039CC252DA09F00F0C386 /* Main.storyboard */; };
+		E76039D0252DA0A300F0C386 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E76039CF252DA0A300F0C386 /* Assets.xcassets */; };
+		E76039D3252DA0A300F0C386 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76039D1252DA0A300F0C386 /* LaunchScreen.storyboard */; };
+		E76039D6252DA0A300F0C386 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E76039D5252DA0A300F0C386 /* main.m */; };
+		E76039DC253084CF00F0C386 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E76039DB253084CF00F0C386 /* Person.m */; };
 		E7DF0F3F251B9C580014CB37 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DF0F3E251B9C580014CB37 /* Person.m */; };
 		E7DF0F48251B9C9B0014CB37 /* Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DF0F47251B9C9B0014CB37 /* Teacher.m */; };
 		E7DF0F4B251B9CE20014CB37 /* Engineer.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DF0F4A251B9CE20014CB37 /* Engineer.m */; };
@@ -82,6 +92,16 @@
 		E7DF0FA62520EDA70014CB37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DF0FA42520EDA70014CB37 /* LaunchScreen.storyboard */; };
 		E7DF0FA92520EDA70014CB37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DF0FA82520EDA70014CB37 /* main.m */; };
 		E7DF0FAF2529603E0014CB37 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DF0FAE2529603E0014CB37 /* Person.m */; };
+		E7DF0FB1252A09100014CB37 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7DF0FB0252A09100014CB37 /* TestView.xib */; };
+		E7DF0FB4252A09250014CB37 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DF0FB3252A09250014CB37 /* TestView.m */; };
+		E7DF0FB9252A0B070014CB37 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DF0FB8252A0B070014CB37 /* Student.m */; };
+		E7DF0FC2252A0F030014CB37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DF0FC1252A0F030014CB37 /* AppDelegate.m */; };
+		E7DF0FC5252A0F030014CB37 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DF0FC4252A0F030014CB37 /* SceneDelegate.m */; };
+		E7DF0FC8252A0F030014CB37 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DF0FC7252A0F030014CB37 /* ViewController.m */; };
+		E7DF0FCB252A0F030014CB37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DF0FC9252A0F030014CB37 /* Main.storyboard */; };
+		E7DF0FCD252A0F040014CB37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7DF0FCC252A0F040014CB37 /* Assets.xcassets */; };
+		E7DF0FD0252A0F040014CB37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DF0FCE252A0F040014CB37 /* LaunchScreen.storyboard */; };
+		E7DF0FD3252A0F050014CB37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DF0FD2252A0F050014CB37 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +207,24 @@
 		E726C391251A499B00E8C14A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E726C393251A499B00E8C14A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E726C394251A499B00E8C14A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E76039B7252D5C7700F0C386 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		E76039B8252D5C7700F0C386 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		E76039BA252D5DB600F0C386 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		E76039BB252D5DB600F0C386 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		E76039C1252DA09F00F0C386 /* 09并行编程.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "09并行编程.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E76039C3252DA09F00F0C386 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E76039C4252DA09F00F0C386 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E76039C6252DA09F00F0C386 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		E76039C7252DA09F00F0C386 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		E76039C9252DA09F00F0C386 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E76039CA252DA09F00F0C386 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E76039CD252DA09F00F0C386 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E76039CF252DA0A300F0C386 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E76039D2252DA0A300F0C386 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E76039D4252DA0A300F0C386 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E76039D5252DA0A300F0C386 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E76039DA253084CF00F0C386 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		E76039DB253084CF00F0C386 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		E7DF0F3D251B9C580014CB37 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		E7DF0F3E251B9C580014CB37 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		E7DF0F46251B9C9B0014CB37 /* Teacher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Teacher.h; sourceTree = "<group>"; };
@@ -238,6 +276,23 @@
 		E7DF0FA82520EDA70014CB37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E7DF0FAD2529603E0014CB37 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		E7DF0FAE2529603E0014CB37 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		E7DF0FB0252A09100014CB37 /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
+		E7DF0FB2252A09250014CB37 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		E7DF0FB3252A09250014CB37 /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		E7DF0FB7252A0B070014CB37 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		E7DF0FB8252A0B070014CB37 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		E7DF0FBE252A0F030014CB37 /* 08块对象.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "08块对象.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7DF0FC0252A0F030014CB37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E7DF0FC1252A0F030014CB37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E7DF0FC3252A0F030014CB37 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		E7DF0FC4252A0F030014CB37 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		E7DF0FC6252A0F030014CB37 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E7DF0FC7252A0F030014CB37 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E7DF0FCA252A0F030014CB37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E7DF0FCC252A0F040014CB37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7DF0FCF252A0F040014CB37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E7DF0FD1252A0F050014CB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7DF0FD2252A0F050014CB37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +345,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E76039BE252DA09F00F0C386 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7DF0F50251EFC470014CB37 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -305,6 +367,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E7DF0F912520EDA60014CB37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7DF0FBB252A0F020014CB37 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -327,6 +396,8 @@
 				E7DF0F54251EFC470014CB37 /* 05Foundation中常用的类 */,
 				E7DF0F71251F7F080014CB37 /* 06范畴 */,
 				E7DF0F952520EDA60014CB37 /* 07抽象类和类簇 */,
+				E7DF0FBF252A0F030014CB37 /* 08块对象 */,
+				E76039C2252DA09F00F0C386 /* 09并行编程 */,
 				E726C2CF2509212500E8C14A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -344,6 +415,8 @@
 				E7DF0F53251EFC470014CB37 /* 05Foundation中常用的类.app */,
 				E7DF0F70251F7F080014CB37 /* 06范畴.app */,
 				E7DF0F942520EDA60014CB37 /* 07抽象类和类簇.app */,
+				E7DF0FBE252A0F030014CB37 /* 08块对象.app */,
+				E76039C1252DA09F00F0C386 /* 09并行编程.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -483,6 +556,26 @@
 			path = "04属性声明";
 			sourceTree = "<group>";
 		};
+		E76039C2252DA09F00F0C386 /* 09并行编程 */ = {
+			isa = PBXGroup;
+			children = (
+				E76039C3252DA09F00F0C386 /* AppDelegate.h */,
+				E76039C4252DA09F00F0C386 /* AppDelegate.m */,
+				E76039C6252DA09F00F0C386 /* SceneDelegate.h */,
+				E76039C7252DA09F00F0C386 /* SceneDelegate.m */,
+				E76039C9252DA09F00F0C386 /* ViewController.h */,
+				E76039CA252DA09F00F0C386 /* ViewController.m */,
+				E76039DA253084CF00F0C386 /* Person.h */,
+				E76039DB253084CF00F0C386 /* Person.m */,
+				E76039CC252DA09F00F0C386 /* Main.storyboard */,
+				E76039CF252DA0A300F0C386 /* Assets.xcassets */,
+				E76039D1252DA0A300F0C386 /* LaunchScreen.storyboard */,
+				E76039D4252DA0A300F0C386 /* Info.plist */,
+				E76039D5252DA0A300F0C386 /* main.m */,
+			);
+			path = "09并行编程";
+			sourceTree = "<group>";
+		};
 		E7DF0F54251EFC470014CB37 /* 05Foundation中常用的类 */ = {
 			isa = PBXGroup;
 			children = (
@@ -535,6 +628,11 @@
 				E7DF0F9D2520EDA60014CB37 /* ViewController.m */,
 				E7DF0FAD2529603E0014CB37 /* Person.h */,
 				E7DF0FAE2529603E0014CB37 /* Person.m */,
+				E7DF0FB7252A0B070014CB37 /* Student.h */,
+				E7DF0FB8252A0B070014CB37 /* Student.m */,
+				E7DF0FB2252A09250014CB37 /* TestView.h */,
+				E7DF0FB3252A09250014CB37 /* TestView.m */,
+				E7DF0FB0252A09100014CB37 /* TestView.xib */,
 				E7DF0F9F2520EDA60014CB37 /* Main.storyboard */,
 				E7DF0FA22520EDA70014CB37 /* Assets.xcassets */,
 				E7DF0FA42520EDA70014CB37 /* LaunchScreen.storyboard */,
@@ -542,6 +640,28 @@
 				E7DF0FA82520EDA70014CB37 /* main.m */,
 			);
 			path = "07抽象类和类簇";
+			sourceTree = "<group>";
+		};
+		E7DF0FBF252A0F030014CB37 /* 08块对象 */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF0FC0252A0F030014CB37 /* AppDelegate.h */,
+				E7DF0FC1252A0F030014CB37 /* AppDelegate.m */,
+				E7DF0FC3252A0F030014CB37 /* SceneDelegate.h */,
+				E7DF0FC4252A0F030014CB37 /* SceneDelegate.m */,
+				E7DF0FC6252A0F030014CB37 /* ViewController.h */,
+				E7DF0FC7252A0F030014CB37 /* ViewController.m */,
+				E76039B7252D5C7700F0C386 /* Person.h */,
+				E76039B8252D5C7700F0C386 /* Person.m */,
+				E76039BA252D5DB600F0C386 /* Student.h */,
+				E76039BB252D5DB600F0C386 /* Student.m */,
+				E7DF0FC9252A0F030014CB37 /* Main.storyboard */,
+				E7DF0FCC252A0F040014CB37 /* Assets.xcassets */,
+				E7DF0FCE252A0F040014CB37 /* LaunchScreen.storyboard */,
+				E7DF0FD1252A0F050014CB37 /* Info.plist */,
+				E7DF0FD2252A0F050014CB37 /* main.m */,
+			);
+			path = "08块对象";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -668,6 +788,23 @@
 			productReference = E726C380251A499900E8C14A /* 04属性声明.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E76039C0252DA09F00F0C386 /* 09并行编程 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E76039D7252DA0A300F0C386 /* Build configuration list for PBXNativeTarget "09并行编程" */;
+			buildPhases = (
+				E76039BD252DA09F00F0C386 /* Sources */,
+				E76039BE252DA09F00F0C386 /* Frameworks */,
+				E76039BF252DA09F00F0C386 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "09并行编程";
+			productName = "09并行编程";
+			productReference = E76039C1252DA09F00F0C386 /* 09并行编程.app */;
+			productType = "com.apple.product-type.application";
+		};
 		E7DF0F52251EFC470014CB37 /* 05Foundation中常用的类 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7DF0F69251EFC4E0014CB37 /* Build configuration list for PBXNativeTarget "05Foundation中常用的类" */;
@@ -719,6 +856,23 @@
 			productReference = E7DF0F942520EDA60014CB37 /* 07抽象类和类簇.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E7DF0FBD252A0F020014CB37 /* 08块对象 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7DF0FD4252A0F050014CB37 /* Build configuration list for PBXNativeTarget "08块对象" */;
+			buildPhases = (
+				E7DF0FBA252A0F020014CB37 /* Sources */,
+				E7DF0FBB252A0F020014CB37 /* Frameworks */,
+				E7DF0FBC252A0F020014CB37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "08块对象";
+			productName = "08块对象";
+			productReference = E7DF0FBE252A0F030014CB37 /* 08块对象.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -751,6 +905,9 @@
 					E726C37F251A499900E8C14A = {
 						CreatedOnToolsVersion = 11.4;
 					};
+					E76039C0252DA09F00F0C386 = {
+						CreatedOnToolsVersion = 11.4;
+					};
 					E7DF0F52251EFC470014CB37 = {
 						CreatedOnToolsVersion = 11.4;
 					};
@@ -758,6 +915,9 @@
 						CreatedOnToolsVersion = 11.4;
 					};
 					E7DF0F932520EDA60014CB37 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					E7DF0FBD252A0F020014CB37 = {
 						CreatedOnToolsVersion = 11.4;
 					};
 				};
@@ -785,6 +945,8 @@
 				E7DF0F52251EFC470014CB37 /* 05Foundation中常用的类 */,
 				E7DF0F6F251F7F080014CB37 /* 06范畴 */,
 				E7DF0F932520EDA60014CB37 /* 07抽象类和类簇 */,
+				E7DF0FBD252A0F020014CB37 /* 08块对象 */,
+				E76039C0252DA09F00F0C386 /* 09并行编程 */,
 			);
 		};
 /* End PBXProject section */
@@ -854,6 +1016,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E76039BF252DA09F00F0C386 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E76039D3252DA0A300F0C386 /* LaunchScreen.storyboard in Resources */,
+				E76039D0252DA0A300F0C386 /* Assets.xcassets in Resources */,
+				E76039CE252DA09F00F0C386 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7DF0F51251EFC470014CB37 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -878,9 +1050,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7DF0FB1252A09100014CB37 /* TestView.xib in Resources */,
 				E7DF0FA62520EDA70014CB37 /* LaunchScreen.storyboard in Resources */,
 				E7DF0FA32520EDA70014CB37 /* Assets.xcassets in Resources */,
 				E7DF0FA12520EDA60014CB37 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7DF0FBC252A0F020014CB37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7DF0FD0252A0F040014CB37 /* LaunchScreen.storyboard in Resources */,
+				E7DF0FCD252A0F040014CB37 /* Assets.xcassets in Resources */,
+				E7DF0FCB252A0F030014CB37 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -972,6 +1155,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E76039BD252DA09F00F0C386 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E76039CB252DA09F00F0C386 /* ViewController.m in Sources */,
+				E76039C5252DA09F00F0C386 /* AppDelegate.m in Sources */,
+				E76039DC253084CF00F0C386 /* Person.m in Sources */,
+				E76039D6252DA0A300F0C386 /* main.m in Sources */,
+				E76039C8252DA09F00F0C386 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7DF0F4F251EFC470014CB37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1004,7 +1199,22 @@
 				E7DF0F982520EDA60014CB37 /* AppDelegate.m in Sources */,
 				E7DF0FAF2529603E0014CB37 /* Person.m in Sources */,
 				E7DF0FA92520EDA70014CB37 /* main.m in Sources */,
+				E7DF0FB9252A0B070014CB37 /* Student.m in Sources */,
+				E7DF0FB4252A09250014CB37 /* TestView.m in Sources */,
 				E7DF0F9B2520EDA60014CB37 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7DF0FBA252A0F020014CB37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7DF0FC8252A0F030014CB37 /* ViewController.m in Sources */,
+				E7DF0FC2252A0F030014CB37 /* AppDelegate.m in Sources */,
+				E76039B9252D5C7700F0C386 /* Person.m in Sources */,
+				E7DF0FD3252A0F050014CB37 /* main.m in Sources */,
+				E7DF0FC5252A0F030014CB37 /* SceneDelegate.m in Sources */,
+				E76039BC252D5DB600F0C386 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1104,6 +1314,22 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		E76039CC252DA09F00F0C386 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E76039CD252DA09F00F0C386 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E76039D1252DA0A300F0C386 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E76039D2252DA0A300F0C386 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		E7DF0F5E251EFC470014CB37 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1148,6 +1374,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				E7DF0FA52520EDA70014CB37 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E7DF0FC9252A0F030014CB37 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7DF0FCA252A0F030014CB37 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E7DF0FCE252A0F040014CB37 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7DF0FCF252A0F040014CB37 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1499,6 +1741,38 @@
 			};
 			name = Release;
 		};
+		E76039D8252DA0A300F0C386 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "09并行编程/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-056838379-qq.com.-9----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E76039D9252DA0A300F0C386 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "09并行编程/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-056838379-qq.com.-9----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E7DF0F6A251EFC4E0014CB37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1595,6 +1869,38 @@
 			};
 			name = Release;
 		};
+		E7DF0FD5252A0F050014CB37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "08块对象/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-056838379-qq.com.-8---";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7DF0FD6252A0F050014CB37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "08块对象/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-056838379-qq.com.-8---";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1670,6 +1976,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		E76039D7252DA0A300F0C386 /* Build configuration list for PBXNativeTarget "09并行编程" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E76039D8252DA0A300F0C386 /* Debug */,
+				E76039D9252DA0A300F0C386 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E7DF0F69251EFC4E0014CB37 /* Build configuration list for PBXNativeTarget "05Foundation中常用的类" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1693,6 +2008,15 @@
 			buildConfigurations = (
 				E7DF0FAB2520EDA70014CB37 /* Debug */,
 				E7DF0FAC2520EDA70014CB37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7DF0FD4252A0F050014CB37 /* Build configuration list for PBXNativeTarget "08块对象" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7DF0FD5252A0F050014CB37 /* Debug */,
+				E7DF0FD6252A0F050014CB37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

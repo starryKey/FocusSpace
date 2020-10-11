@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Person.h"
+#import "Student.h"
 
 @interface ViewController ()
 
@@ -31,6 +32,14 @@
     cPerson.name = @"John";
     cPerson.age = 24;
     NSLog(@"A name: %@ age: %lu, B name: %@ age: %lu, C name: %@, age: %lu", aPerson.name, aPerson.age, bPerson.name, bPerson.age, cPerson.name, cPerson.age);
+    
+    // 归档
+    Student * stu = [[Student alloc] init];
+    
+    NSString * test = @"test";
+    NSLog(@"propertyList: %@", [test propertyList]);
+    NSMutableDictionary * mudic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"test",@"testValue", nil];
+
 }
 - (void)play {
     NSLog(@"-->");

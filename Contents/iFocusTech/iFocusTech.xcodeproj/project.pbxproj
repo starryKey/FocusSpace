@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E778FA4025374D66009EC1B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E778FA3F25374D66009EC1B7 /* AppDelegate.m */; };
+		E778FA4325374D66009EC1B7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E778FA4225374D66009EC1B7 /* SceneDelegate.m */; };
+		E778FA4625374D66009EC1B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E778FA4525374D66009EC1B7 /* ViewController.m */; };
+		E778FA4925374D66009EC1B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E778FA4725374D66009EC1B7 /* Main.storyboard */; };
+		E778FA4C25374D66009EC1B7 /* iFocusTech.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E778FA4A25374D66009EC1B7 /* iFocusTech.xcdatamodeld */; };
+		E778FA4E25374D6C009EC1B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E778FA4D25374D6C009EC1B7 /* Assets.xcassets */; };
+		E778FA5125374D6C009EC1B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E778FA4F25374D6C009EC1B7 /* LaunchScreen.storyboard */; };
+		E778FA5425374D6C009EC1B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E778FA5325374D6C009EC1B7 /* main.m */; };
+		E778FA5E25374D6C009EC1B7 /* iFocusTechTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E778FA5D25374D6C009EC1B7 /* iFocusTechTests.m */; };
+		E778FA6925374D6C009EC1B7 /* iFocusTechUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E778FA6825374D6C009EC1B7 /* iFocusTechUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E778FA5A25374D6C009EC1B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E778FA3325374D66009EC1B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E778FA3A25374D66009EC1B7;
+			remoteInfo = iFocusTech;
+		};
+		E778FA6525374D6C009EC1B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E778FA3325374D66009EC1B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E778FA3A25374D66009EC1B7;
+			remoteInfo = iFocusTech;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E778FA3B25374D66009EC1B7 /* iFocusTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFocusTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E778FA3E25374D66009EC1B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E778FA3F25374D66009EC1B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E778FA4125374D66009EC1B7 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		E778FA4225374D66009EC1B7 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		E778FA4425374D66009EC1B7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E778FA4525374D66009EC1B7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E778FA4825374D66009EC1B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E778FA4B25374D66009EC1B7 /* iFocusTech.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iFocusTech.xcdatamodel; sourceTree = "<group>"; };
+		E778FA4D25374D6C009EC1B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E778FA5025374D6C009EC1B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E778FA5225374D6C009EC1B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E778FA5325374D6C009EC1B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E778FA5925374D6C009EC1B7 /* iFocusTechTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iFocusTechTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E778FA5D25374D6C009EC1B7 /* iFocusTechTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iFocusTechTests.m; sourceTree = "<group>"; };
+		E778FA5F25374D6C009EC1B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E778FA6425374D6C009EC1B7 /* iFocusTechUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iFocusTechUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E778FA6825374D6C009EC1B7 /* iFocusTechUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iFocusTechUITests.m; sourceTree = "<group>"; };
+		E778FA6A25374D6C009EC1B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E778FA3825374D66009EC1B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E778FA5625374D6C009EC1B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E778FA6125374D6C009EC1B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E778FA3225374D66009EC1B7 = {
+			isa = PBXGroup;
+			children = (
+				E778FA3D25374D66009EC1B7 /* iFocusTech */,
+				E778FA5C25374D6C009EC1B7 /* iFocusTechTests */,
+				E778FA6725374D6C009EC1B7 /* iFocusTechUITests */,
+				E778FA3C25374D66009EC1B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E778FA3C25374D66009EC1B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E778FA3B25374D66009EC1B7 /* iFocusTech.app */,
+				E778FA5925374D6C009EC1B7 /* iFocusTechTests.xctest */,
+				E778FA6425374D6C009EC1B7 /* iFocusTechUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E778FA3D25374D66009EC1B7 /* iFocusTech */ = {
+			isa = PBXGroup;
+			children = (
+				E778FA3E25374D66009EC1B7 /* AppDelegate.h */,
+				E778FA3F25374D66009EC1B7 /* AppDelegate.m */,
+				E778FA4125374D66009EC1B7 /* SceneDelegate.h */,
+				E778FA4225374D66009EC1B7 /* SceneDelegate.m */,
+				E778FA4425374D66009EC1B7 /* ViewController.h */,
+				E778FA4525374D66009EC1B7 /* ViewController.m */,
+				E778FA4725374D66009EC1B7 /* Main.storyboard */,
+				E778FA4D25374D6C009EC1B7 /* Assets.xcassets */,
+				E778FA4F25374D6C009EC1B7 /* LaunchScreen.storyboard */,
+				E778FA5225374D6C009EC1B7 /* Info.plist */,
+				E778FA5325374D6C009EC1B7 /* main.m */,
+				E778FA4A25374D66009EC1B7 /* iFocusTech.xcdatamodeld */,
+			);
+			path = iFocusTech;
+			sourceTree = "<group>";
+		};
+		E778FA5C25374D6C009EC1B7 /* iFocusTechTests */ = {
+			isa = PBXGroup;
+			children = (
+				E778FA5D25374D6C009EC1B7 /* iFocusTechTests.m */,
+				E778FA5F25374D6C009EC1B7 /* Info.plist */,
+			);
+			path = iFocusTechTests;
+			sourceTree = "<group>";
+		};
+		E778FA6725374D6C009EC1B7 /* iFocusTechUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E778FA6825374D6C009EC1B7 /* iFocusTechUITests.m */,
+				E778FA6A25374D6C009EC1B7 /* Info.plist */,
+			);
+			path = iFocusTechUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E778FA3A25374D66009EC1B7 /* iFocusTech */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E778FA6D25374D6C009EC1B7 /* Build configuration list for PBXNativeTarget "iFocusTech" */;
+			buildPhases = (
+				E778FA3725374D66009EC1B7 /* Sources */,
+				E778FA3825374D66009EC1B7 /* Frameworks */,
+				E778FA3925374D66009EC1B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iFocusTech;
+			productName = iFocusTech;
+			productReference = E778FA3B25374D66009EC1B7 /* iFocusTech.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E778FA5825374D6C009EC1B7 /* iFocusTechTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E778FA7025374D6C009EC1B7 /* Build configuration list for PBXNativeTarget "iFocusTechTests" */;
+			buildPhases = (
+				E778FA5525374D6C009EC1B7 /* Sources */,
+				E778FA5625374D6C009EC1B7 /* Frameworks */,
+				E778FA5725374D6C009EC1B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E778FA5B25374D6C009EC1B7 /* PBXTargetDependency */,
+			);
+			name = iFocusTechTests;
+			productName = iFocusTechTests;
+			productReference = E778FA5925374D6C009EC1B7 /* iFocusTechTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E778FA6325374D6C009EC1B7 /* iFocusTechUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E778FA7325374D6C009EC1B7 /* Build configuration list for PBXNativeTarget "iFocusTechUITests" */;
+			buildPhases = (
+				E778FA6025374D6C009EC1B7 /* Sources */,
+				E778FA6125374D6C009EC1B7 /* Frameworks */,
+				E778FA6225374D6C009EC1B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E778FA6625374D6C009EC1B7 /* PBXTargetDependency */,
+			);
+			name = iFocusTechUITests;
+			productName = iFocusTechUITests;
+			productReference = E778FA6425374D6C009EC1B7 /* iFocusTechUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E778FA3325374D66009EC1B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Li_JinLin;
+				TargetAttributes = {
+					E778FA3A25374D66009EC1B7 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					E778FA5825374D6C009EC1B7 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = E778FA3A25374D66009EC1B7;
+					};
+					E778FA6325374D6C009EC1B7 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = E778FA3A25374D66009EC1B7;
+					};
+				};
+			};
+			buildConfigurationList = E778FA3625374D66009EC1B7 /* Build configuration list for PBXProject "iFocusTech" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E778FA3225374D66009EC1B7;
+			productRefGroup = E778FA3C25374D66009EC1B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E778FA3A25374D66009EC1B7 /* iFocusTech */,
+				E778FA5825374D6C009EC1B7 /* iFocusTechTests */,
+				E778FA6325374D6C009EC1B7 /* iFocusTechUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E778FA3925374D66009EC1B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E778FA5125374D6C009EC1B7 /* LaunchScreen.storyboard in Resources */,
+				E778FA4E25374D6C009EC1B7 /* Assets.xcassets in Resources */,
+				E778FA4925374D66009EC1B7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E778FA5725374D6C009EC1B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E778FA6225374D6C009EC1B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E778FA3725374D66009EC1B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E778FA5425374D6C009EC1B7 /* main.m in Sources */,
+				E778FA4C25374D66009EC1B7 /* iFocusTech.xcdatamodeld in Sources */,
+				E778FA4625374D66009EC1B7 /* ViewController.m in Sources */,
+				E778FA4025374D66009EC1B7 /* AppDelegate.m in Sources */,
+				E778FA4325374D66009EC1B7 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E778FA5525374D6C009EC1B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E778FA5E25374D6C009EC1B7 /* iFocusTechTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E778FA6025374D6C009EC1B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E778FA6925374D6C009EC1B7 /* iFocusTechUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E778FA5B25374D6C009EC1B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E778FA3A25374D66009EC1B7 /* iFocusTech */;
+			targetProxy = E778FA5A25374D6C009EC1B7 /* PBXContainerItemProxy */;
+		};
+		E778FA6625374D6C009EC1B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E778FA3A25374D66009EC1B7 /* iFocusTech */;
+			targetProxy = E778FA6525374D6C009EC1B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E778FA4725374D66009EC1B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E778FA4825374D66009EC1B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E778FA4F25374D6C009EC1B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E778FA5025374D6C009EC1B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E778FA6B25374D6C009EC1B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E778FA6C25374D6C009EC1B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E778FA6E25374D6C009EC1B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iFocusTech/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-056838379-qq.com.iFocusTech";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E778FA6F25374D6C009EC1B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iFocusTech/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-056838379-qq.com.iFocusTech";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E778FA7125374D6C009EC1B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iFocusTechTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-056838379-qq.com.iFocusTechTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iFocusTech.app/iFocusTech";
+			};
+			name = Debug;
+		};
+		E778FA7225374D6C009EC1B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iFocusTechTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-056838379-qq.com.iFocusTechTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iFocusTech.app/iFocusTech";
+			};
+			name = Release;
+		};
+		E778FA7425374D6C009EC1B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iFocusTechUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-056838379-qq.com.iFocusTechUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iFocusTech;
+			};
+			name = Debug;
+		};
+		E778FA7525374D6C009EC1B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iFocusTechUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-056838379-qq.com.iFocusTechUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iFocusTech;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E778FA3625374D66009EC1B7 /* Build configuration list for PBXProject "iFocusTech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E778FA6B25374D6C009EC1B7 /* Debug */,
+				E778FA6C25374D6C009EC1B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E778FA6D25374D6C009EC1B7 /* Build configuration list for PBXNativeTarget "iFocusTech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E778FA6E25374D6C009EC1B7 /* Debug */,
+				E778FA6F25374D6C009EC1B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E778FA7025374D6C009EC1B7 /* Build configuration list for PBXNativeTarget "iFocusTechTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E778FA7125374D6C009EC1B7 /* Debug */,
+				E778FA7225374D6C009EC1B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E778FA7325374D6C009EC1B7 /* Build configuration list for PBXNativeTarget "iFocusTechUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E778FA7425374D6C009EC1B7 /* Debug */,
+				E778FA7525374D6C009EC1B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E778FA4A25374D66009EC1B7 /* iFocusTech.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E778FA4B25374D66009EC1B7 /* iFocusTech.xcdatamodel */,
+			);
+			currentVersion = E778FA4B25374D66009EC1B7 /* iFocusTech.xcdatamodel */;
+			path = iFocusTech.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E778FA3325374D66009EC1B7 /* Project object */;
+}

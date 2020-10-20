@@ -21,19 +21,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     // 01、测试引用计数
-    Person * person = [[Person alloc] init];
-    [person retain];
-    NSLog(@"retainCount: %lu",[person retainCount]);
-    [person release];
-    NSLog(@"retainCount: %lu",[person retainCount]);
-    [person release];
+    Person * person = [[Person alloc] init];        // 引用计数：1
+    [person retain];                                // 引用计数 +1
+    NSLog(@"retainCount: %lu",[person retainCount]);// 引用计数：2
+    [person release];                               // 引用计数 -1
+    NSLog(@"retainCount: %lu",[person retainCount]);// 引用计数：1
+    [person release];                               // 引用计数：-1
+    NSLog(@"retainCount: %lu",[person retainCount]);// 引用计数：0，此时对象被释放，会调用dealloc，不能再使用，否则会造成崩溃
     //person对象的引用计数为0，此时对象被释放，不能再使用，否则会造成崩溃
 //    NSLog(@"retainCount: %lu",[person retainCount]);
 //    [person playSoccer];
     [self testAction];
 //    _jack = [[Person alloc] init];
 //    NSLog(@"%@--->retainCount:%lu", _jack, [_jack retainCount]);
-    //02、
+    
 }
 
 - (void)testAction{
@@ -48,17 +49,17 @@
     
     id pool = [[NSAutoreleasePool alloc] init];
     Person * pA = [[Person alloc] init];
-    [pA autorelease];   // 将对象放入自动释放池pool中
+    [pA autorelease];           // 将对象放入自动释放池pool中，不会立即释放对象
     Person * pB = pA;
-    [pB retain];        // 如果没有该步骤，引用计数为1
+    [pB retain];                // 如果没有该步骤，引用计数为1
     NSLog(@"pool release前：retainCount: %lu",[pA retainCount]); //pA引用计数为2
-    [pool release]; //销毁自动释放池，自动释放池中所有的对象也被销毁。此时pA引用计数减1
+    [pool release];             //销毁自动释放池，自动释放池中所有的对象也被销毁。此时pA引用计数减1
     NSLog(@"pool release后：retainCount: %lu",[pA retainCount]); //pA引用计数为1
     
     NSMutableArray * testArr = [NSMutableArray arrayWithObjects:pA, pA, pA,nil];
-    NSLog(@"%@--> retainCount: %lu", testArr, [pA retainCount]);
+    NSLog(@"%@--> retainCount: %lu", testArr, [pA retainCount]);    //引用计数：4
     [testArr addObject:pA];
-    NSLog(@"%@--> retainCount: %lu", testArr, [pA retainCount]);
+    NSLog(@"%@--> retainCount: %lu", testArr, [pA retainCount]);    //引用计数：5
     
     
     __weak NSObject * obj;

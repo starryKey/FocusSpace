@@ -1,11 +1,12 @@
 //
 //  main.m
-//  iFocusTech
+//  多线程
 //
-//  Created by iFocus on 2020/10/14.
-//  Copyright © 2020 iFocus. All rights reserved.
+//  Created by Li_JinLin on 2020/10/17.
+//  Copyright © 2020 Li_JinLin. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
 int main(int argc, char * argv[]) {
@@ -14,6 +15,5 @@ int main(int argc, char * argv[]) {
         // Setup code that might create autoreleased objects goes here.
         appDelegateClassName = NSStringFromClass([AppDelegate class]);
     }
-    return 0;
-//    return UIApplicationMain(argc, argv, nil, appDelegateClassName);
+    return UIApplicationMain(argc, argv, nil, appDelegateClassName);
 }

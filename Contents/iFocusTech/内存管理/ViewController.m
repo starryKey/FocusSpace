@@ -92,19 +92,23 @@ id __unsafe_unretained testObj = nil;
     NSLog(@"%@", reference); // Console: (sunnyxx)
 }
 
+#pragma mark - 所有权修饰符
+//01 __strong修饰符
 - (void)testStrong{
-
-    // 所有权
-    // 01 __strong修饰符
     id __strong obj1 = [[NSObject alloc] init];
-    
-    // 02 __weak修饰符
+}
+//02 __weak修饰符
+- (void)testWeak{
     id __weak obj2 = [[NSObject alloc] init];
-    
-    // 03 __unsafe_unretained,不安全的所有权修饰符，尽管ARC式的内存管理是编译器的工作，但是附有__unsafe_unretained修饰符的变量不属于编译器的内存管理对象。
-    id __unsafe_unretained obj3 = [[NSObject alloc] init];
-    
-    
+}
+// 03 __unsafe_unretained
+- (void)testUnsafe{
+    //不安全的所有权修饰符，尽管ARC式的内存管理是编译器的工作，但是附有__unsafe_unretained修饰符的变量不属于编译器的内存管理对象。
+      id __unsafe_unretained obj3 = [[NSObject alloc] init];
+}
+// 04 __autoreleasing修饰符
+- (void)testAutoreleasing{
+    id __autoreleasing obj4 = [[NSObject alloc] init];
 }
 
 @end

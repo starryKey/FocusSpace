@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E72CA9DE253F3787003CC1ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA9DD253F3787003CC1ED /* AppDelegate.m */; };
+		E72CA9E1253F3787003CC1ED /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA9E0253F3787003CC1ED /* SceneDelegate.m */; };
+		E72CA9E4253F3787003CC1ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA9E3253F3787003CC1ED /* ViewController.m */; };
+		E72CA9E7253F3787003CC1ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72CA9E5253F3787003CC1ED /* Main.storyboard */; };
+		E72CA9E9253F378A003CC1ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72CA9E8253F378A003CC1ED /* Assets.xcassets */; };
+		E72CA9EC253F378A003CC1ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72CA9EA253F378A003CC1ED /* LaunchScreen.storyboard */; };
+		E72CA9EF253F378A003CC1ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA9EE253F378A003CC1ED /* main.m */; };
 		E778FA4025374D66009EC1B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E778FA3F25374D66009EC1B7 /* AppDelegate.m */; };
 		E778FA4325374D66009EC1B7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E778FA4225374D66009EC1B7 /* SceneDelegate.m */; };
 		E778FA4625374D66009EC1B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E778FA4525374D66009EC1B7 /* ViewController.m */; };
@@ -52,6 +59,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E72CA9DA253F3786003CC1ED /* runtime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = runtime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E72CA9DC253F3786003CC1ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E72CA9DD253F3787003CC1ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E72CA9DF253F3787003CC1ED /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		E72CA9E0253F3787003CC1ED /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		E72CA9E2253F3787003CC1ED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E72CA9E3253F3787003CC1ED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E72CA9E6253F3787003CC1ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E72CA9E8253F378A003CC1ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E72CA9EB253F378A003CC1ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E72CA9ED253F378A003CC1ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E72CA9EE253F378A003CC1ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E778FA3B25374D66009EC1B7 /* iFocusTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFocusTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E778FA3E25374D66009EC1B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E778FA3F25374D66009EC1B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -101,6 +120,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E72CA9D7253F3786003CC1ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E778FA3825374D66009EC1B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,6 +165,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E72CA9DB253F3786003CC1ED /* runtime */ = {
+			isa = PBXGroup;
+			children = (
+				E72CA9DC253F3786003CC1ED /* AppDelegate.h */,
+				E72CA9DD253F3787003CC1ED /* AppDelegate.m */,
+				E72CA9DF253F3787003CC1ED /* SceneDelegate.h */,
+				E72CA9E0253F3787003CC1ED /* SceneDelegate.m */,
+				E72CA9E2253F3787003CC1ED /* ViewController.h */,
+				E72CA9E3253F3787003CC1ED /* ViewController.m */,
+				E72CA9E5253F3787003CC1ED /* Main.storyboard */,
+				E72CA9E8253F378A003CC1ED /* Assets.xcassets */,
+				E72CA9EA253F378A003CC1ED /* LaunchScreen.storyboard */,
+				E72CA9ED253F378A003CC1ED /* Info.plist */,
+				E72CA9EE253F378A003CC1ED /* main.m */,
+			);
+			path = runtime;
+			sourceTree = "<group>";
+		};
 		E778FA3225374D66009EC1B7 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +191,7 @@
 				E778FA5C25374D6C009EC1B7 /* iFocusTechTests */,
 				E778FA6725374D6C009EC1B7 /* iFocusTechUITests */,
 				E778FA98253B2695009EC1B7 /* 多线程 */,
+				E72CA9DB253F3786003CC1ED /* runtime */,
 				E778FA3C25374D66009EC1B7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -159,6 +204,7 @@
 				E778FA6425374D6C009EC1B7 /* iFocusTechUITests.xctest */,
 				E778FA7A25374E3D009EC1B7 /* 内存管理.app */,
 				E778FA97253B2695009EC1B7 /* 多线程.app */,
+				E72CA9DA253F3786003CC1ED /* runtime.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,6 +288,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E72CA9D9253F3786003CC1ED /* runtime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E72CA9F2253F378B003CC1ED /* Build configuration list for PBXNativeTarget "runtime" */;
+			buildPhases = (
+				E72CA9D6253F3786003CC1ED /* Sources */,
+				E72CA9D7253F3786003CC1ED /* Frameworks */,
+				E72CA9D8253F3786003CC1ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = runtime;
+			productName = runtime;
+			productReference = E72CA9DA253F3786003CC1ED /* runtime.app */;
+			productType = "com.apple.product-type.application";
+		};
 		E778FA3A25374D66009EC1B7 /* iFocusTech */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E778FA6D25374D6C009EC1B7 /* Build configuration list for PBXNativeTarget "iFocusTech" */;
@@ -338,6 +401,9 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = Li_JinLin;
 				TargetAttributes = {
+					E72CA9D9253F3786003CC1ED = {
+						CreatedOnToolsVersion = 11.4;
+					};
 					E778FA3A25374D66009EC1B7 = {
 						CreatedOnToolsVersion = 11.4;
 					};
@@ -375,11 +441,22 @@
 				E778FA6325374D6C009EC1B7 /* iFocusTechUITests */,
 				E778FA7925374E3D009EC1B7 /* 内存管理 */,
 				E778FA96253B2695009EC1B7 /* 多线程 */,
+				E72CA9D9253F3786003CC1ED /* runtime */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E72CA9D8253F3786003CC1ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72CA9EC253F378A003CC1ED /* LaunchScreen.storyboard in Resources */,
+				E72CA9E9253F378A003CC1ED /* Assets.xcassets in Resources */,
+				E72CA9E7253F3787003CC1ED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E778FA3925374D66009EC1B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -427,6 +504,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E72CA9D6253F3786003CC1ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E72CA9E4253F3787003CC1ED /* ViewController.m in Sources */,
+				E72CA9DE253F3787003CC1ED /* AppDelegate.m in Sources */,
+				E72CA9EF253F378A003CC1ED /* main.m in Sources */,
+				E72CA9E1253F3787003CC1ED /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E778FA3725374D66009EC1B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -494,6 +582,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		E72CA9E5253F3787003CC1ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E72CA9E6253F3787003CC1ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E72CA9EA253F378A003CC1ED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E72CA9EB253F378A003CC1ED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		E778FA4725374D66009EC1B7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -545,6 +649,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E72CA9F0253F378A003CC1ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = runtime/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-056838379-qq.com.runtime";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E72CA9F1253F378A003CC1ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = runtime/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-056838379-qq.com.runtime";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E778FA6B25374D6C009EC1B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -830,6 +966,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E72CA9F2253F378B003CC1ED /* Build configuration list for PBXNativeTarget "runtime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E72CA9F0253F378A003CC1ED /* Debug */,
+				E72CA9F1253F378A003CC1ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E778FA3625374D66009EC1B7 /* Build configuration list for PBXProject "iFocusTech" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

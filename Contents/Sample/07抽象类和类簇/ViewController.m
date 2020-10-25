@@ -33,8 +33,15 @@
     cPerson.age = 24;
     NSLog(@"A name: %@ age: %lu, B name: %@ age: %lu, C name: %@, age: %lu", aPerson.name, aPerson.age, bPerson.name, bPerson.age, cPerson.name, cPerson.age);
     
+    Person * dPerson = [aPerson mutableCopy];
+    dPerson.name = @"Jane";
+    dPerson.age = 10;
+    
+    NSLog(@"A name: %@ age: %lu, d name: %@, age: %lu", aPerson.name, aPerson.age, dPerson.name, dPerson.age);
+    
     // 归档
     Student * stu = [[Student alloc] init];
+    
     
     NSString * test = @"test";
     NSLog(@"propertyList: %@", [test propertyList]);

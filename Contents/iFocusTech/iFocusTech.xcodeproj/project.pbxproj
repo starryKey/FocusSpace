@@ -14,6 +14,8 @@
 		E72CA9E9253F378A003CC1ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72CA9E8253F378A003CC1ED /* Assets.xcassets */; };
 		E72CA9EC253F378A003CC1ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72CA9EA253F378A003CC1ED /* LaunchScreen.storyboard */; };
 		E72CA9EF253F378A003CC1ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA9EE253F378A003CC1ED /* main.m */; };
+		E72CA9F52543F8E8003CC1ED /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA9F42543F8E8003CC1ED /* TestModel.m */; };
+		E72CA9F825440F64003CC1ED /* CollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA9F725440F64003CC1ED /* CollectionModel.m */; };
 		E778FA4025374D66009EC1B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E778FA3F25374D66009EC1B7 /* AppDelegate.m */; };
 		E778FA4325374D66009EC1B7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E778FA4225374D66009EC1B7 /* SceneDelegate.m */; };
 		E778FA4625374D66009EC1B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E778FA4525374D66009EC1B7 /* ViewController.m */; };
@@ -71,6 +73,10 @@
 		E72CA9EB253F378A003CC1ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E72CA9ED253F378A003CC1ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E72CA9EE253F378A003CC1ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E72CA9F32543F8E8003CC1ED /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		E72CA9F42543F8E8003CC1ED /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
+		E72CA9F625440F64003CC1ED /* CollectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionModel.h; sourceTree = "<group>"; };
+		E72CA9F725440F64003CC1ED /* CollectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionModel.m; sourceTree = "<group>"; };
 		E778FA3B25374D66009EC1B7 /* iFocusTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFocusTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E778FA3E25374D66009EC1B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E778FA3F25374D66009EC1B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -257,6 +263,10 @@
 				E778FA8325374E3D009EC1B7 /* ViewController.m */,
 				E778FAB0253B3A38009EC1B7 /* Person.h */,
 				E778FAB1253B3A38009EC1B7 /* Person.m */,
+				E72CA9F32543F8E8003CC1ED /* TestModel.h */,
+				E72CA9F42543F8E8003CC1ED /* TestModel.m */,
+				E72CA9F625440F64003CC1ED /* CollectionModel.h */,
+				E72CA9F725440F64003CC1ED /* CollectionModel.m */,
 				E778FAB3253B4495009EC1B7 /* PublicHeader.h */,
 				E778FA8525374E3D009EC1B7 /* Main.storyboard */,
 				E778FA8825374E3F009EC1B7 /* Assets.xcassets */,
@@ -550,8 +560,10 @@
 				E778FA8425374E3D009EC1B7 /* ViewController.m in Sources */,
 				E778FA7E25374E3D009EC1B7 /* AppDelegate.m in Sources */,
 				E778FAB2253B3A38009EC1B7 /* Person.m in Sources */,
+				E72CA9F52543F8E8003CC1ED /* TestModel.m in Sources */,
 				E778FA8F25374E3F009EC1B7 /* main.m in Sources */,
 				E778FA8125374E3D009EC1B7 /* SceneDelegate.m in Sources */,
+				E72CA9F825440F64003CC1ED /* CollectionModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +665,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = runtime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -669,6 +682,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = runtime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

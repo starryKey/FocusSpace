@@ -10,11 +10,18 @@
 
 @implementation Person
 
-- (nonnull id)copyWithZone:(nullable NSZone *)zone {
+- (id)copyWithZone:(nullable NSZone *)zone{
     Person * psn = [[[self class] allocWithZone:zone] init];
-    if (psn) {
-    }
+    psn.name = [self.name copyWithZone:NULL];
+    return psn;
+}
+
+- (id)mutableCopyWithZone:(NSZone *)zone{
+    Person * psn = [[[self class] allocWithZone:zone] init];
+    psn.name = [self.name copyWithZone:NULL];
     return psn;
 }
 
 @end
+
+

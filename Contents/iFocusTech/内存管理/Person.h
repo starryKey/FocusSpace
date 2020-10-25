@@ -10,9 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Person : NSObject
+@interface Person : NSObject<NSCopying, NSMutableCopying>
 
-- (nonnull id)copyWithZone:(nullable NSZone *)zone;
+@property(nonatomic, copy) NSString * name;
+
 
 @end
 

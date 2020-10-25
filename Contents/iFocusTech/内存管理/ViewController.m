@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "Person.h"
 #import "PublicHeader.h"
+#import "TestModel.h"
+#import "CollectionModel.h"
 
 @interface ViewController ()
 
@@ -66,17 +68,53 @@ id __unsafe_unretained testObj = nil;
     NSLog(@"p = %p", &p);
     NSLog(@"q = %p", &q);
     NSLog(@"str2 = %p", &str2);
-//    NSLog(@"kPublicString = %p", &(UIApplicationDidEnterBackgroundNotification));
+    NSLog(@"kPublicString = %p", &(UIApplicationDidEnterBackgroundNotification));
     
     */
+//    NSString *str = [NSString stringWithFormat:@"sunnyxx"];
+//    reference = str;
+//
+//    id __strong obj = [[NSObject alloc] init];
+//    testObj = obj;
+//    NSLog(@"01-->%@", testObj);
+//    [self test];
     
-    NSString *str = [NSString stringWithFormat:@"sunnyxx"];
-    reference = str;
+//    Person *p1 = [[Person alloc] init];
+//    p1.name = @"Jack";
+//    // 生成并持有对象
+//    Person *p2 = (Person *)[p1 copy];
+//    p2.name = @"Tom";
+//    NSLog(@"p1:%@, 地址：%p", p1, &p1);
+//    NSLog(@"p2:%@, 地址：%p", p2, &p2);
     
-    id __strong obj = [[NSObject alloc] init];
-    testObj = obj;
-    NSLog(@"01-->%@", testObj);
-    [self test];
+    Person *p1 = [[Person alloc] init];
+    p1.name = @"Jack";
+    // 生成并持有对象
+    Person *p2 = (Person *)[p1 copy];
+    // 生成并持有对象
+    Person *p3 = (Person *)[p1 mutableCopy];
+    p3.name = @"John";
+    NSLog(@"p1:%@, 地址：%p, name:%@", p1, &p1, p1.name);
+    NSLog(@"p2:%@, 地址：%p, name:%@", p2, &p2, p2.name);
+    NSLog(@"p2:%@, 地址：%p, name:%@", p3, &p3, p3.name);
+    
+    NSString *testStr = @"hello";
+    NSString *str = (NSString *)[testStr copy];
+    str = [str stringByAppendingString:@"world"];
+    
+    //-----测试深拷贝和浅拷贝------
+    // 不可变字符串的拷贝
+//    [self testStringCopy];
+    NSLog(@"=============我是分割线================");
+    // 可变字符串的拷贝
+//    [self testMutableCopy];
+    // 测试对象拷贝
+//    [self testCustomObject];
+//    [self testCus];
+//    [self testCollectionCopy];
+    
+    [self testDeepCopyCollection];
+    
 }
 - (void)test{
     NSLog(@"02-->%@", testObj);
@@ -84,12 +122,12 @@ id __unsafe_unretained testObj = nil;
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    NSLog(@"%@", reference); // Console: sunnyxx
+    //NSLog(@"%@", reference); // Console: sunnyxx
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    NSLog(@"%@", reference); // Console: (sunnyxx)
+    //NSLog(@"%@", reference); // Console: (sunnyxx)
 }
 
 #pragma mark - 所有权修饰符
@@ -109,6 +147,176 @@ id __unsafe_unretained testObj = nil;
 // 04 __autoreleasing修饰符
 - (void)testAutoreleasing{
     id __autoreleasing obj4 = [[NSObject alloc] init];
+}
+
+#pragma mark - 对象的拷贝
+// NSString
+- (void)testStringCopy{
+    NSString *str = @"original value";
+    NSString *copyStr = [str copy];
+    NSMutableString *mutableCopyStr = [str mutableCopy];
+    NSLog(@"地址:%p 值:%@", str, str);
+    NSLog(@"地址:%p 值:%@", copyStr, copyStr);
+    NSLog(@"地址:%p 值:%@", mutableCopyStr, mutableCopyStr);
+}
+//NSMutableString
+- (void)testMutableCopy{
+    NSMutableString *str = [NSMutableString stringWithString:@"original value"];
+    NSMutableString *copyStr = [str copy];
+    NSMutableString *mutableCopyStr = [str mutableCopy];
+    NSLog(@"地址:%p 值:%@", str, str);
+    NSLog(@"地址:%p 值:%@", copyStr, copyStr);
+    NSLog(@"地址:%p 值:%@", mutableCopyStr, mutableCopyStr);
+}
+
+- (void)testCustomObject{
+    NSMutableArray *mutableArray = [NSMutableArray array];
+    TestModel *model = [[TestModel alloc] initWithTitle:@"title" subTitle:[NSMutableString stringWithString:@"subTitle"] norArray:@[@"test1", @"test2"] mutArrry:mutableArray];
+    TestModel *copyModel = [model copy];
+    TestModel *mutableModel = [model mutableCopy];
+    
+    NSLog(@"******TestModel内存地址******");
+    NSLog(@"原始地址：%p", model);
+    NSLog(@"copy地址：%p", copyModel);
+    NSLog(@"mutableCopy地址：%p", mutableModel);
+    
+    NSLog(@"******  属性title(NSString)内存地址  ******");
+    NSLog(@"原始地址：%p", model.title);
+    NSLog(@"copy地址：%p", copyModel.title);
+    NSLog(@"mutableCopy地址：%p", mutableModel.title);
+    
+    NSLog(@"****** 属性subTitle(NSMutableString)内存地址 ******");
+    NSLog(@"原始地址：%p", model.subTitle);
+    NSLog(@"copy地址：%p", copyModel.subTitle);
+    NSLog(@"mutableCopy地址：%p", mutableModel.subTitle);
+    
+    NSLog(@"****** 属性norArray(NSArray)内存地址 ******");
+    NSLog(@"原始地址：%p", model.norArray);
+    NSLog(@"copy地址：%p", copyModel.norArray);
+    NSLog(@"mutableCopy地址：%p", mutableModel.norArray);
+    
+    NSLog(@"****** 属性mutArrry(NSMutableArray)内存地址 ******");
+    NSLog(@"原始地址：%p", model.mutArray);
+    NSLog(@"copy地址：%p", copyModel.mutArray);
+    NSLog(@"mutableCopy地址：%p", mutableModel.mutArray);
+}
+
+- (void)testCus{
+    
+    NSMutableArray *mutArr = [[NSMutableArray alloc] init];
+    [mutArr addObject:@"str0"];
+    CollectionModel *model = [[CollectionModel alloc] initWithMutArr:mutArr name:@"Jack" nickname: [NSMutableString stringWithString:@"JackJone"]];
+    CollectionModel *copyModel = [model copy];
+    CollectionModel *mutCopyModel = [model mutableCopy];
+    
+    [model.mutableArray addObject:@"str1"];
+    [copyModel.mutableArray addObject:@"str2"];
+    [mutCopyModel.mutableArray addObject:@"str3"];
+    
+    NSLog(@"=========我是分割线========>");
+    NSLog(@"原始地址：%p", model);
+    NSLog(@"Copy地址：%p", copyModel);
+    NSLog(@"mutableCopy地址：%p", mutCopyModel);
+    
+    NSLog(@"========mutArr=========>");
+    NSLog(@"原始地址：%p", model.mutableArray);
+    NSLog(@"Copy地址：%p", copyModel.mutableArray);
+    NSLog(@"mutableCopy地址：%p", mutCopyModel.mutableArray);
+    
+    NSLog(@"========mutArr=========>");
+    NSLog(@"原始地址：%@", model.mutableArray);
+    NSLog(@"Copy地址：%@", copyModel.mutableArray);
+    NSLog(@"mutableCopy地址：%@", mutCopyModel.mutableArray);
+    
+    model.name = @"TestName";
+    NSLog(@"=========name========>");
+    NSLog(@"原始地址：%@", model.name);
+    NSLog(@"Copy地址：%@", copyModel.name);
+    NSLog(@"mutableCopy地址：%@", mutCopyModel.name);
+    
+    model.nickname = [NSMutableString stringWithString:@"TestNickname"];
+    NSLog(@"=========nickname========>");
+    NSLog(@"原始地址：%@", model.nickname);
+    NSLog(@"Copy地址：%@", copyModel.nickname);
+    NSLog(@"mutableCopy地址：%@", mutCopyModel.nickname);
+}
+
+// 集合的拷贝
+- (void)testCollectionCopy{
+    /*
+    NSArray *oriArr = [NSArray arrayWithObjects:@"test", nil];
+    //01、浅拷贝
+    NSArray *copyArr = [oriArr copy];
+    NSLog(@"%p", oriArr);
+    NSLog(@"%p", copyArr);
+    
+    //02、单层深拷贝
+    NSMutableArray *mutArr = [oriArr mutableCopy];
+    NSLog(@"%p", oriArr);
+    NSLog(@"%p", mutArr);
+    //内部元素
+    NSLog(@"%p", oriArr[0]);
+    NSLog(@"%p", mutArr[0]);
+     
+    */
+    
+    // 03、双层深拷贝：
+    
+    NSMutableString *mutString1 = [NSMutableString stringWithString:@"test1"];
+    NSMutableString *mutString2 = [NSMutableString stringWithString:@"test1"];
+    NSMutableArray *mutableArr = [NSMutableArray arrayWithObjects:mutString2, nil];
+    NSArray *testArr = [NSArray arrayWithObjects:mutString1, mutableArr, nil];
+    //通过官方文档提供的方式进行创建copy
+    NSArray *testArrCopy = [[NSArray alloc] initWithArray:testArr copyItems:YES];
+    //testArr和testArrCopy进行对比
+    NSLog(@"===我是分割线01===");
+    NSLog(@"%p", testArr);
+    NSLog(@"%p", testArrCopy);
+    
+    //testArr和testArrCopy中元素指针对比
+    //mutableString对比
+    NSLog(@"===我是分割线02===");
+    NSLog(@"%p", testArr[0]);
+    NSLog(@"%p", testArrCopy[0]);
+    
+    //mutableArr对比
+    NSLog(@"===我是分割线03===");
+    NSLog(@"%p", testArr[1]);
+    NSLog(@"%p", testArrCopy[1]);
+    
+    //mutableArr中元素对比，即mutalbeString2进行对比
+    NSLog(@"===我是分割线04===");
+    NSLog(@"%p", testArr[1][0]);
+    NSLog(@"%p", testArrCopy[1][0]);
+}
+
+- (void)testDeepCopyCollection{
+    NSMutableString *mutString1 = [NSMutableString stringWithString:@"test1"];
+    NSMutableString *mutString2 = [NSMutableString stringWithString:@"test1"];
+    NSMutableArray *mutableArr = [NSMutableArray arrayWithObjects:mutString2, nil];
+    NSArray *testArr = [NSArray arrayWithObjects:mutString1, mutableArr, nil];
+    //通过归档、解档的方式创建copy
+    NSArray *testArrCopy = [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject:testArr]];
+    //testArr和testArrCopy进行对比
+    NSLog(@"===我是分割线01===");
+    NSLog(@"%p", testArr);
+    NSLog(@"%p", testArrCopy);
+   
+    //testArr和testArrCopy中元素指针对比
+    //mutableString对比
+    NSLog(@"===我是分割线02===");
+    NSLog(@"%p", testArr[0]);
+    NSLog(@"%p", testArrCopy[0]);
+   
+    //mutableArr对比
+    NSLog(@"===我是分割线03===");
+    NSLog(@"%p", testArr[1]);
+    NSLog(@"%p", testArrCopy[1]);
+   
+    //mutableArr中元素对比，即mutalbeString2进行对比
+    NSLog(@"===我是分割线04===");
+    NSLog(@"%p", testArr[1][0]);
+    NSLog(@"%p", testArrCopy[1][0]);
 }
 
 @end

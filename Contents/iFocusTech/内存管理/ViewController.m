@@ -98,9 +98,17 @@ id __unsafe_unretained testObj = nil;
     NSLog(@"p2:%@, 地址：%p, name:%@", p2, &p2, p2.name);
     NSLog(@"p2:%@, 地址：%p, name:%@", p3, &p3, p3.name);
     
-    NSString *testStr = @"hello";
-    NSString *str = (NSString *)[testStr copy];
-    str = [str stringByAppendingString:@"world"];
+    //ARC下如何访问retainCount属性，这里提供了两种方式（下面代码中a代表一个任意对象，这个对象最好不要是NSString和NSNumber，因为用它们进行测试会出问题）
+    // 桥接字方式
+    NSLog(@"Retain count: %ld", CFGetRetainCount((__bridge CFTypeRef)p3));
+    // KVC方式
+    NSLog(@"Retain count: %@", [p3 valueForKey:@"retainCount"]);
+    
+    
+    
+//    NSString *testStr = [NSString stringWithFormat:@"1"];
+    NSString *testStr = @"a";
+    NSLog(@" %s, %p", object_getClassName(testStr), testStr);
     
     //-----测试深拷贝和浅拷贝------
     // 不可变字符串的拷贝
@@ -114,6 +122,8 @@ id __unsafe_unretained testObj = nil;
 //    [self testCollectionCopy];
     
     [self testDeepCopyCollection];
+    
+    [self testObjSize];
     
 }
 - (void)test{
@@ -317,6 +327,12 @@ id __unsafe_unretained testObj = nil;
     NSLog(@"===我是分割线04===");
     NSLog(@"%p", testArr[1][0]);
     NSLog(@"%p", testArrCopy[1][0]);
+}
+
+- (void)testObjSize{
+    NSNumber *num1 = @1;
+    NSLog(@"%@--地址：%p", num1, num1);
+    NSLog(@"%lu", sizeof(num1));
 }
 
 @end

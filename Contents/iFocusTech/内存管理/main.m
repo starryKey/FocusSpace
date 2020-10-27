@@ -11,6 +11,11 @@
 int main(int argc, char * argv[]) {
     NSString * appDelegateClassName;
     @autoreleasepool {
+        
+        NSNumber *num1 = [NSNumber numberWithInt:1];
+        NSLog(@"%@--地址：%p", num1, num1);
+        NSLog(@"%lu", sizeof(num1));
+        
         appDelegateClassName = NSStringFromClass([AppDelegate class]);
     }
     return UIApplicationMain(argc, argv, nil, appDelegateClassName);

@@ -52,6 +52,11 @@
       </BuildableProductRunnable>
       <EnvironmentVariables>
          <EnvironmentVariable
+            key = "OBJC_DISABLE_TAG_OBFUSCATION"
+            value = "YES"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
             key = "OBJC_DISABLE_TAGGED_POINTERS"
             value = "YES"
             isEnabled = "NO">

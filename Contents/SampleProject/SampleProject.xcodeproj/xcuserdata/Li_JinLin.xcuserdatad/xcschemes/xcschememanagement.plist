@@ -7,7 +7,7 @@
 		<key>001两数之和.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>5</integer>
 		</dict>
 		<key>007整数反转.xcscheme_^#shared#^_</key>
 		<dict>
@@ -17,7 +17,7 @@
 		<key>00集合.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>8</integer>
 		</dict>
 		<key>01排序.xcscheme_^#shared#^_</key>
 		<dict>
@@ -27,22 +27,27 @@
 		<key>01链表.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>9</integer>
 		</dict>
-		<key>02查找.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
-		</dict>
-		<key>02栈和队列.xcscheme_^#shared#^_</key>
+		<key>020有效的括号.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>02查找.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>02栈和队列.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>03分治.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>10</integer>
 		</dict>
 		<key>03分治法.xcscheme_^#shared#^_</key>
 		<dict>
@@ -52,17 +57,22 @@
 		<key>04递归.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>10</integer>
+			<integer>1</integer>
 		</dict>
 		<key>344反转字符串.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>7</integer>
 		</dict>
 		<key>SampleProject.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>11</integer>
+		</dict>
+		<key>有效的括号.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
 		</dict>
 	</dict>
 </dict>

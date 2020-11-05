@@ -7,6 +7,8 @@
 //
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import <malloc/malloc.h>
+#import <objc/runtime.h>
 
 int main(int argc, char * argv[]) {
     NSString * appDelegateClassName;
@@ -15,22 +17,18 @@ int main(int argc, char * argv[]) {
         NSNumber *num1 = @1;
         NSNumber *num2 = @2;
         NSNumber *num3 = @3;
-        NSNumber *num4 = @(999999999);
-        
-        
-//        NSNumber *num1 = @1;
-//        NSNumber *num2 = @(999999999);
-//        NSString *str1 = @"1";
-//        NSString *str2 = @"abcdefghijklmnopqrst";
-//        NSIndexPath *indexPath = [[NSIndexPath alloc] initWithIndex:0];
-//        NSDate *date = [[NSDate alloc] init];
+        NSNumber *num4 = @(0xEFFFFFFFFFFFFFFF);
+
+        NSLog(@"%p", num1);
+        NSLog(@"%p", num2);
+        NSLog(@"%p", num3);
+        NSLog(@"%p", num4);
 //
-//        NSLog(@"num1(%@<%p>: %p): %@", [num1 class], &num1, num1, num1);
-//        NSLog(@"num2(%@<%p>: %p): %@", [num2 class], &num2, num2, num2);
-//        NSLog(@"str1(%@<%p>: %p): %@", [str1 class], &str1, str1, str1);
-//        NSLog(@"num1(%@<%p>: %p): %@", [str2 class], &str2, str2, str2);
-//        NSLog(@"indexPath(%@<%p>: %p): %@", [indexPath class], &indexPath, indexPath, indexPath);
-//        NSLog(@"date(%@<%p>: %p): %@", [date class], &date, date, date);
+//        NSInteger i = 0xFFFFFFFFFFFFFF;
+//        NSNumber *number = [NSNumber numberWithInteger:i];
+//        NSLog(@"%zd", malloc_size((__bridge const void *)(number))); // 32
+//        NSLog(@"%zd", sizeof(number)); // 8
+    
         
         
         appDelegateClassName = NSStringFromClass([AppDelegate class]);

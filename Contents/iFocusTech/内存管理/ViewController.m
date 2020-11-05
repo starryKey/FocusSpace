@@ -11,6 +11,7 @@
 #import "PublicHeader.h"
 #import "TestModel.h"
 #import "CollectionModel.h"
+#import <objc/runtime.h>
 
 @interface ViewController ()
 
@@ -36,7 +37,29 @@ id __unsafe_unretained testObj = nil;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    NSNumber *num1 = @(2);
+    NSNumber *num2 = @(10);
+    NSNumber *num3 = @(12);
+    NSNumber *num4 = @(15);
+    NSNumber *num5 = @(0xFFFFFFFFFFFFFFFF);
+    
+    NSLog(@"num1 = %@ - %p - 0x%lx", num1, &num1, _objc_decodeTaggedPointer((__bridge const void * _Nullable)(num1)));
+    NSLog(@"num2 = %@ - %p - 0x%lx", num2, &num2, _objc_decodeTaggedPointer((__bridge const void * _Nullable)(num2)));
+    NSLog(@"num3 = %@ - %p - 0x%lx", num3, &num3, _objc_decodeTaggedPointer((__bridge const void * _Nullable)(num3)));
+    NSLog(@"num4 = %@ - %p - 0x%lx", num4, &num4, _objc_decodeTaggedPointer((__bridge const void * _Nullable)(num4)));
+    NSLog(@"num5 = %@ - %p - 0x%lx", num5, &num5, _objc_decodeTaggedPointer((__bridge const void * _Nullable)(num5)));
+    
+    NSString * str1 = [NSString stringWithFormat:@"a"];
+    NSString * str2 = [NSString stringWithFormat:@"ab"];
+    NSString * str3 = [NSString stringWithFormat:@"abc"];
+    NSString * str4 = [NSString stringWithFormat:@"abcd"];
+    
+    NSLog(@"str1 = %@ - %p - 0x%lx",str1, &str1, _objc_decodeTaggedPointer((__bridge const void * _Nullable)(str1)));
+    NSLog(@"str1 = %@ - %p - 0x%lx",str2, &str2, _objc_decodeTaggedPointer((__bridge const void * _Nullable)(str2)));
+    NSLog(@"str1 = %@ - %p - 0x%lx",str3, &str3, _objc_decodeTaggedPointer((__bridge const void * _Nullable)(str3)));
+    NSLog(@"str1 = %@ - %p - 0x%lx",str4, &str4, _objc_decodeTaggedPointer((__bridge const void * _Nullable)(str4)));
+
     /*
     // 栈区示例
     int a = 0;
@@ -120,12 +143,23 @@ id __unsafe_unretained testObj = nil;
 //    [self testCustomObject];
 //    [self testCus];
 //    [self testCollectionCopy];
-    
-    [self testDeepCopyCollection];
-    
-    [self testObjSize];
+    //
+//    [self testDeepCopyCollection];
+//    [self testObjSize];
     
 }
+
+extern uintptr_t objc_debug_taggedpointer_obfuscator;
+
+static inline uintptr_t
+_objc_decodeTaggedPointer(const void * _Nullable ptr)
+{
+    return (uintptr_t)ptr ^ objc_debug_taggedpointer_obfuscator;
+}
+
+//static inline enum objc_tag_index_t
+//_objc_getTaggedPointerTag(const void * _Nullable ptr);
+
 - (void)test{
     NSLog(@"02-->%@", testObj);
 }
@@ -299,7 +333,7 @@ id __unsafe_unretained testObj = nil;
     NSLog(@"%p", testArr[1][0]);
     NSLog(@"%p", testArrCopy[1][0]);
 }
-
+// 测试集合深拷贝
 - (void)testDeepCopyCollection{
     NSMutableString *mutString1 = [NSMutableString stringWithString:@"test1"];
     NSMutableString *mutString2 = [NSMutableString stringWithString:@"test1"];

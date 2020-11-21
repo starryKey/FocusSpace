@@ -33,10 +33,17 @@ static NSString *str2 = @"test";
 
 __weak id reference = nil;
 
-id __unsafe_unretained testObj = nil;
+id __unsafe_unretained obj1 = nil;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    id __strong obj2 = [[NSObject alloc] init];
+    obj1 = obj2;
+    NSLog(@"A---:%@",obj1);
+    
+    
+    
     
     NSNumber *num1 = @(2);
     NSNumber *num2 = @(10);
@@ -127,8 +134,6 @@ id __unsafe_unretained testObj = nil;
     // KVC方式
     NSLog(@"Retain count: %@", [p3 valueForKey:@"retainCount"]);
     
-    
-    
 //    NSString *testStr = [NSString stringWithFormat:@"1"];
     NSString *testStr = @"a";
     NSLog(@" %s, %p", object_getClassName(testStr), testStr);
@@ -147,7 +152,12 @@ id __unsafe_unretained testObj = nil;
 //    [self testDeepCopyCollection];
 //    [self testObjSize];
     
+    [self testIsa];
+    
+    [p1 testIsa];
+    
 }
+
 
 extern uintptr_t objc_debug_taggedpointer_obfuscator;
 
@@ -161,7 +171,7 @@ _objc_decodeTaggedPointer(const void * _Nullable ptr)
 //_objc_getTaggedPointerTag(const void * _Nullable ptr);
 
 - (void)test{
-    NSLog(@"02-->%@", testObj);
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -367,6 +377,10 @@ _objc_decodeTaggedPointer(const void * _Nullable ptr)
     NSNumber *num1 = @1;
     NSLog(@"%@--地址：%p", num1, num1);
     NSLog(@"%lu", sizeof(num1));
+}
+
+- (void)testIsa{
+
 }
 
 @end

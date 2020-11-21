@@ -16,8 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    NSError *error = nil;
+    BOOL result = [self performOperationWithError:&error];
+    NSLog(@"Error:%@, result:%d", error, result);
 }
 
+- (BOOL)performOperationWithError:(NSError * __autoreleasing *)error{
+    //出错了
+    *error = [NSError errorWithDomain:@"error test" code:1 userInfo:nil];
+    return NO;
+}
 
 @end

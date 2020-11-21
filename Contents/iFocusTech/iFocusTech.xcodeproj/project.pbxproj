@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E72CA9DE253F3787003CC1ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA9DD253F3787003CC1ED /* AppDelegate.m */; };
-		E72CA9E1253F3787003CC1ED /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA9E0253F3787003CC1ED /* SceneDelegate.m */; };
 		E72CA9E4253F3787003CC1ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72CA9E3253F3787003CC1ED /* ViewController.m */; };
 		E72CA9E7253F3787003CC1ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72CA9E5253F3787003CC1ED /* Main.storyboard */; };
 		E72CA9E9253F378A003CC1ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72CA9E8253F378A003CC1ED /* Assets.xcassets */; };
@@ -41,6 +40,8 @@
 		E778FAA9253B2699009EC1B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E778FAA7253B2699009EC1B7 /* LaunchScreen.storyboard */; };
 		E778FAAC253B2699009EC1B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E778FAAB253B2699009EC1B7 /* main.m */; };
 		E778FAB2253B3A38009EC1B7 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E778FAB1253B3A38009EC1B7 /* Person.m */; };
+		E7AE5106255990E7002DF3B8 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AE5105255990E6002DF3B8 /* Person.m */; };
+		E7AE511025681934002DF3B8 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AE510F25681934002DF3B8 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +65,6 @@
 		E72CA9DA253F3786003CC1ED /* runtime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = runtime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72CA9DC253F3786003CC1ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E72CA9DD253F3787003CC1ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E72CA9DF253F3787003CC1ED /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		E72CA9E0253F3787003CC1ED /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		E72CA9E2253F3787003CC1ED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E72CA9E3253F3787003CC1ED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E72CA9E6253F3787003CC1ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,6 +122,10 @@
 		E778FAB0253B3A38009EC1B7 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		E778FAB1253B3A38009EC1B7 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		E778FAB3253B4495009EC1B7 /* PublicHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicHeader.h; sourceTree = "<group>"; };
+		E7AE5104255990E6002DF3B8 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		E7AE5105255990E6002DF3B8 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		E7AE510E25681934002DF3B8 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		E7AE510F25681934002DF3B8 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,10 +177,9 @@
 		E72CA9DB253F3786003CC1ED /* runtime */ = {
 			isa = PBXGroup;
 			children = (
+				E7AE510D25681917002DF3B8 /* 01对象的底层原理 */,
 				E72CA9DC253F3786003CC1ED /* AppDelegate.h */,
 				E72CA9DD253F3787003CC1ED /* AppDelegate.m */,
-				E72CA9DF253F3787003CC1ED /* SceneDelegate.h */,
-				E72CA9E0253F3787003CC1ED /* SceneDelegate.m */,
 				E72CA9E2253F3787003CC1ED /* ViewController.h */,
 				E72CA9E3253F3787003CC1ED /* ViewController.m */,
 				E72CA9E5253F3787003CC1ED /* Main.storyboard */,
@@ -224,6 +226,8 @@
 				E778FA4225374D66009EC1B7 /* SceneDelegate.m */,
 				E778FA4425374D66009EC1B7 /* ViewController.h */,
 				E778FA4525374D66009EC1B7 /* ViewController.m */,
+				E7AE5104255990E6002DF3B8 /* Person.h */,
+				E7AE5105255990E6002DF3B8 /* Person.m */,
 				E778FA4725374D66009EC1B7 /* Main.storyboard */,
 				E778FA4D25374D6C009EC1B7 /* Assets.xcassets */,
 				E778FA4F25374D6C009EC1B7 /* LaunchScreen.storyboard */,
@@ -293,6 +297,15 @@
 				E778FAAB253B2699009EC1B7 /* main.m */,
 			);
 			path = "多线程";
+			sourceTree = "<group>";
+		};
+		E7AE510D25681917002DF3B8 /* 01对象的底层原理 */ = {
+			isa = PBXGroup;
+			children = (
+				E7AE510E25681934002DF3B8 /* Person.h */,
+				E7AE510F25681934002DF3B8 /* Person.m */,
+			);
+			path = "01对象的底层原理";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -520,8 +533,8 @@
 			files = (
 				E72CA9E4253F3787003CC1ED /* ViewController.m in Sources */,
 				E72CA9DE253F3787003CC1ED /* AppDelegate.m in Sources */,
+				E7AE511025681934002DF3B8 /* Person.m in Sources */,
 				E72CA9EF253F378A003CC1ED /* main.m in Sources */,
-				E72CA9E1253F3787003CC1ED /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7AE5106255990E7002DF3B8 /* Person.m in Sources */,
 				E778FA5425374D6C009EC1B7 /* main.m in Sources */,
 				E778FA4C25374D66009EC1B7 /* iFocusTech.xcdatamodeld in Sources */,
 				E778FA4625374D66009EC1B7 /* ViewController.m in Sources */,
@@ -666,14 +680,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RX466JZZB3;
 				INFOPLIST_FILE = runtime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-056838379-qq.com.runtime";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifocus.runtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -683,14 +701,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RX466JZZB3;
 				INFOPLIST_FILE = runtime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-056838379-qq.com.runtime";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifocus.runtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -916,7 +938,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "内存管理/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -925,6 +948,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-056838379-qq.com.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -934,7 +958,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "内存管理/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -943,6 +968,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-056838379-qq.com.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
